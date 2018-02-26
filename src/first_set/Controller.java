@@ -1,17 +1,20 @@
 package first_set;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.shape.SVGPath;
+import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+
 
 public class Controller {
-    public Label mylabel;
-    public SVGPath lock;
-    public Button mybutton;
+    @FXML
+    public TextField main_password;
 
-    public void verify_press_button (ActionEvent event) {
-        lock.setLayoutX(-615.0);
-        lock.setLayoutY(-73.0);
+    @FXML
+    public void press_button (ActionEvent event) {
+        System.out.println(main_password.getText());
+//        if (pass) { turn to the other page }
+//        else alert
     }
 }
