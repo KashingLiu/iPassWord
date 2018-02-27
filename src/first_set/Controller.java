@@ -45,9 +45,8 @@ public class Controller {
         Platform.runLater(() -> {
             try {
                 ObservableList<Stage> stage = FXRobotHelper.getStages();
-                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../verify/verify.fxml")));
+                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../Main_menu/Main_menu.fxml")));
                 stage.get(0).setScene(scene);
-
             } catch (IOException e1) {
                 e1.printStackTrace();
             }

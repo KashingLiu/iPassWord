@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -16,7 +17,9 @@ public class Main extends Application {
         primarystage.setResizable(false);
         primarystage.setTitle("iPassword");
         primarystage.setScene(new Scene(root));
+
         primarystage.show();
+
     }
 
     public static void main(String[] args) {

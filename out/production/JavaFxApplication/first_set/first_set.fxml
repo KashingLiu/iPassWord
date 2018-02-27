@@ -33,7 +33,7 @@
       </Label>
       <Label layoutX="188.0" layoutY="113.0" text="您的主密码十分重要,通过它可以查看您设置的所有密码,请妥善保管." />
       <Label layoutX="188.0" layoutY="363.0" text="Copyright © 2018 Kashing Liu. All Rights Reserved." />
-      <Button fx:id="first_set_btn" onAction="#ButtonPressed" contentDisplay="CENTER" layoutX="437.0" layoutY="187.0" mnemonicParsing="false" text="确认">
+      <Button contentDisplay="CENTER" onAction="#ButtonPressed" layoutX="437.0" layoutY="187.0" mnemonicParsing="false" text="确认">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></Button>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="first_set.Controller">
+   <children>
+      <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="6.0" />
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="724.0" prefWidth="249.0">
+         <children>
+            <ListView layoutX="6.0" layoutY="22.0" prefHeight="329.0" prefWidth="231.0" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="519.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="12.0" />
+      <AnchorPane layoutX="249.0" layoutY="-1.0" prefHeight="724.0" prefWidth="274.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="524.0" layoutY="-1.0" prefHeight="725.0" prefWidth="675.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>
