@@ -74,17 +74,19 @@ public class AesEncodeUtil {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
+        verify_password a = new verify_password();
+        int out = a.verify("1Kashingliu");
+        System.out.println(out);
 
-
-        String content = "kashingliu";
-        // 加密
-        System.out.println("加密前：" + content);
-        String encryptResult = encrypt(content);
-
-        System.out.println("加密后：" + encryptResult);
-        // 解密
-        String decryptResult = decrypt(encryptResult);
-        System.out.println("解密后：" + decryptResult);
+//        String content = "kashingliu";
+//        // 加密
+//        System.out.println("加密前：" + content);
+//        String encryptResult = encrypt(content);
+//
+//        System.out.println("加密后：" + encryptResult);
+//        // 解密
+//        String decryptResult = decrypt(encryptResult);
+//        System.out.println("解密后：" + decryptResult);
 
     }
 }

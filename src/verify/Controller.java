@@ -3,10 +3,8 @@ package verify;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.shape.SVGPath;
 
-import java.awt.event.InputMethodEvent;
 
 public class Controller {
     @FXML
