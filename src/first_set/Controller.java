@@ -41,7 +41,9 @@ public class Controller {
 //        else alert
     }
 
+    //当按钮按下时切换界面，原来的界面消失
     public void ButtonPressed(ActionEvent evt) throws Exception {
+        Main.user.setMain_password(main_password.getText());
         Platform.runLater(() -> {
             try {
                 ObservableList<Stage> stage = FXRobotHelper.getStages();
@@ -51,7 +53,6 @@ public class Controller {
                 e1.printStackTrace();
             }
         });
-        System.out.println("ok");
     }
 }
 
