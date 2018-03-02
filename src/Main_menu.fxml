@@ -64,7 +64,7 @@
                   </TextField>
                   <TextField layoutX="250.0" layoutY="158.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="158.0" />
                   <TextField layoutX="250.0" layoutY="186.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="186.0" />
-                  <TextField layoutX="250.0" layoutY="214.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" />
+                  <TextField editable="false" layoutX="250.0" layoutY="214.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" />
                   <TextField layoutX="250.0" layoutY="243.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" />
                   <TextField layoutX="250.0" layoutY="271.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="258.0" />
                   <Label layoutX="208.0" layoutY="162.0" text="全名" textFill="#707070" AnchorPane.rightAnchor="437.0" AnchorPane.topAnchor="162.0">
@@ -111,6 +111,7 @@
                   <TextArea layoutX="262.0" layoutY="342.0" prefHeight="138.0" prefWidth="350.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="250.0" />
                </children></AnchorPane>
             <Separator layoutY="688.0" prefHeight="0.0" prefWidth="675.0" />
+            <Button layoutX="450.0" layoutY="693.0" mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="693.0" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

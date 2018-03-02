@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ListViewWithImages.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu.fxml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Database.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Password.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/WirelessRouter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/content.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Main_menu.fxml" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Main_menu.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Util/Users.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Util/Users.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu.fxml" afterPath="$PROJECT_DIR$/src/Main_menu.fxml" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Controller.java" afterPath="$PROJECT_DIR$/src/Main_menu/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" afterPath="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Password.java" afterPath="$PROJECT_DIR$/src/Util/Password.java" />
       <change beforePath="$PROJECT_DIR$/src/Util/Users.java" afterPath="$PROJECT_DIR$/src/Util/Users.java" />
-      <change beforePath="$PROJECT_DIR$/src/first_set/Controller.java" afterPath="$PROJECT_DIR$/src/first_set/Controller.java" />
       <change beforePath="$PROJECT_DIR$/src/first_set/Main.java" afterPath="$PROJECT_DIR$/src/first_set/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -79,35 +70,14 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="253" column="11" lean-forward="false" selection-start-line="253" selection-start-column="11" selection-end-line="253" selection-end-column="11" />
+            <state relative-caret-position="207">
+              <caret line="129" column="4" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#1473:2441" expanded="false" />
+                <element signature="method#pre_set_WiFi#0;class#Controller#0" expanded="false" />
+                <element signature="method#set_WiFi#0;class#Controller#0" expanded="false" />
+                <element signature="method#display_WiFi#0;class#Controller#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Database.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-              <folding>
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Password.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/Password.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,29 +92,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main_menu.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu.fxml">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="45" column="60" lean-forward="true" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding>
-                <element signature="e#160#161#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +127,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -198,12 +169,13 @@
         <option value="$PROJECT_DIR$/src/Main_menu/Left_Up_ListCell.java" />
         <option value="$PROJECT_DIR$/src/ListViewWithImages.java" />
         <option value="$PROJECT_DIR$/src/Util/content.txt" />
-        <option value="$PROJECT_DIR$/src/first_set/Main.java" />
         <option value="$PROJECT_DIR$/src/first_set/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Util/Users.java" />
         <option value="$PROJECT_DIR$/src/Util/WirelessRouter.java" />
         <option value="$PROJECT_DIR$/src/Util/Database.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/main_menu.css" />
         <option value="$PROJECT_DIR$/src/Util/Password.java" />
+        <option value="$PROJECT_DIR$/src/Util/Users.java" />
+        <option value="$PROJECT_DIR$/src/first_set/Main.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Controller.java" />
       </list>
     </option>
@@ -310,6 +282,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -514,12 +487,20 @@
       <workItem from="1519527783609" duration="78000" />
       <workItem from="1519528139906" duration="9134000" />
       <workItem from="1519628252589" duration="23810000" />
-      <workItem from="1519716108260" duration="35361000" />
+      <workItem from="1519716108260" duration="49271000" />
     </task>
+    <task id="LOCAL-00001" summary="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来">
+      <created>1519869271520</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519869271520</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70999000" />
+    <option name="totallyTimeSpent" value="84909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -568,9 +549,13 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -605,7 +590,9 @@
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#1473:2441" expanded="false" />
+            <element signature="method#pre_set_WiFi#0;class#Controller#0" expanded="false" />
+            <element signature="method#set_WiFi#0;class#Controller#0" expanded="false" />
+            <element signature="method#display_WiFi#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -638,8 +625,8 @@
           <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#775#776#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#774#775#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,18 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/first_set/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#775#776#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/first_set/processing.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -923,16 +898,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/first_set/first_set.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -944,38 +909,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/Password.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -984,10 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/WirelessRouter.java">
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/main_menu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1003,13 +936,74 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Util/Password.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="253" column="11" lean-forward="false" selection-start-line="253" selection-start-column="11" selection-end-line="253" selection-end-column="11" />
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/first_set/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#335#336#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="45" column="60" lean-forward="true" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/WirelessRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#1473:2441" expanded="false" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="129" column="4" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#pre_set_WiFi#0;class#Controller#0" expanded="false" />
+            <element signature="method#set_WiFi#0;class#Controller#0" expanded="false" />
+            <element signature="method#display_WiFi#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>

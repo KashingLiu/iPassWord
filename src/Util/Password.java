@@ -8,7 +8,7 @@ public class Password {
     public String Note;                    //备注
     public String tag;                     //项目标识
     public String SetUpDate;               //添加这个项目的日期
-    Password(String name, String Note, String tag) {
+    public Password(String name, String Note, String tag) {
         this.name = name;
         this.Note = Note;
         this.SetUpDate = date.toString();
