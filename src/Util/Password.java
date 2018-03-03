@@ -1,5 +1,6 @@
 package Util;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Password {
@@ -12,7 +13,8 @@ public class Password {
     public Password(String name, String Note, String tag) {
         this.name = name;
         this.Note = Note;
-        this.SetUpDate = date.toString();
+        SimpleDateFormat df=new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        this.SetUpDate = df.format(date);
         this.tag = tag;
     }
     public String getNote() {

@@ -22,6 +22,9 @@ public class Set_Login {
 
     private static TextArea Note_tf = new TextArea();
     private static TextField name_tf = new TextField();
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
 
     private static void pre_set_login() {
         name_tf.setEditable(true);
@@ -47,7 +50,8 @@ public class Set_Login {
         password.setStyle("-fx-text-fill:#707070");
         site.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
-
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
 
         name.setFont(new Font(15.0));
@@ -56,32 +60,36 @@ public class Set_Login {
         site.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
-
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(username,437.0);
         AnchorPane.setRightAnchor(password,437.0);
         AnchorPane.setRightAnchor(site,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(username,190.0);
         AnchorPane.setTopAnchor(password,218.0);
         AnchorPane.setTopAnchor(site,246.0);
         AnchorPane.setTopAnchor(Note,273.0);
+        AnchorPane.setTopAnchor(set_Date_la,273.0+166.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(username_tf,250.0);
         AnchorPane.setLeftAnchor(password_tf,250.0);
         AnchorPane.setLeftAnchor(site_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(username_tf,186.0);
         AnchorPane.setTopAnchor(password_tf,214.0);
         AnchorPane.setTopAnchor(site_tf,242.0);
         AnchorPane.setTopAnchor(Note_tf,269.0);
+        AnchorPane.setTopAnchor(set_Date_con,273.0+166.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -129,6 +137,7 @@ public class Set_Login {
                 lg.setUsername(username_tf.getText());
                 lg.setPassword(password_tf.getText());
                 lg.setSite(site_tf.getText());
+                set_Date_con.setText(lg.getSetUpDate());
                 Main.user.add_password(lg);
                 add_list(choice_list,mid_list_items,lg);
                 add_button.setDisable(false);
@@ -148,7 +157,7 @@ public class Set_Login {
     public static void display_login(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Login login) {
         pre_set_login();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
         name_tf.setEditable(false);
         username_tf.setEditable(false);
         password_tf.setEditable(false);
@@ -172,7 +181,7 @@ public class Set_Login {
             pre_set_login();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

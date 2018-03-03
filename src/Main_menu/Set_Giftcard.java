@@ -30,6 +30,10 @@ public class Set_Giftcard {
     private static Label Note = new Label("备注");
     private static Label title = new Label("奖励活动");
 
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
+
     private static TextArea Note_tf = new TextArea();
     private static void pre_set_giftcard() {
         name_tf.setEditable(true);
@@ -71,6 +75,8 @@ public class Set_Giftcard {
         Phone.setStyle("-fx-text-fill:#707070");
         site.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
         name.setFont(new Font(15.0));
         memberName.setFont(new Font(15.0));
@@ -82,7 +88,8 @@ public class Set_Giftcard {
         site.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
-
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(memberName,437.0);
@@ -93,6 +100,7 @@ public class Set_Giftcard {
         AnchorPane.setRightAnchor(Phone,437.0);
         AnchorPane.setRightAnchor(site,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(memberName,190.0);
@@ -103,7 +111,7 @@ public class Set_Giftcard {
         AnchorPane.setTopAnchor(Phone,330.0);
         AnchorPane.setTopAnchor(site,358.0);
         AnchorPane.setTopAnchor(Note,386.0);
-
+        AnchorPane.setTopAnchor(set_Date_la,552.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(memberName_tf,250.0);
@@ -114,7 +122,7 @@ public class Set_Giftcard {
         AnchorPane.setLeftAnchor(Phone_tf,250.0);
         AnchorPane.setLeftAnchor(site_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(memberName_tf,186.0);
@@ -125,7 +133,7 @@ public class Set_Giftcard {
         AnchorPane.setTopAnchor(Phone_tf,327.0);
         AnchorPane.setTopAnchor(site_tf,354.0);
         AnchorPane.setTopAnchor(Note_tf,382.0);
-
+        AnchorPane.setTopAnchor(set_Date_con,552.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -177,7 +185,7 @@ public class Set_Giftcard {
                 gc.setPhone(Phone_tf.getText());
                 gc.setPIN(PIN_tf.getText());
                 gc.setSite(site_tf.getText());
-
+                set_Date_con.setText(gc.getSetUpDate());
                 Main.user.add_password(gc);
                 add_list(choice_list,mid_list_items,gc);
                 add_button.setDisable(false);
@@ -197,7 +205,7 @@ public class Set_Giftcard {
     public static void display_giftcard(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, GiftCard giftCard) {
         pre_set_giftcard();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(name_tf,memberName,memberID,PIN,memberID_att,In_date,Phone,site,memberName_tf,memberID_tf,PIN_tf,memberID_att_tf,In_date_tf,Phone_tf,site_tf,Note_tf,name,Note,title);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,memberName,memberID,PIN,memberID_att,In_date,Phone,site,memberName_tf,memberID_tf,PIN_tf,memberID_att_tf,In_date_tf,Phone_tf,site_tf,Note_tf,name,Note,title);
         name_tf.setEditable(false);
         memberName_tf.setEditable(false);
         memberID_tf.setEditable(false);
@@ -228,7 +236,7 @@ public class Set_Giftcard {
             pre_set_giftcard();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name_tf,memberName,memberID,PIN,memberID_att,In_date,Phone,site,memberName_tf,memberID_tf,PIN_tf,memberID_att_tf,In_date_tf,Phone_tf,site_tf,Note_tf,name,Note,title);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,memberName,memberID,PIN,memberID_att,In_date,Phone,site,memberName_tf,memberID_tf,PIN_tf,memberID_att_tf,In_date_tf,Phone_tf,site_tf,Note_tf,name,Note,title);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

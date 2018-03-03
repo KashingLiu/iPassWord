@@ -27,6 +27,8 @@ public class Set_Software {
     private static Label Note = new Label("备注");
     private static Label title = new Label("软件许可证");
     private static TextArea Note_tf = new TextArea();
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
 
     private static void pre_set_software() {
         name_tf.setEditable(true);
@@ -60,6 +62,8 @@ public class Set_Software {
         buy_date.setStyle("-fx-text-fill:#707070");
         expiry_date.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
         name.setFont(new Font(15.0));
         version.setFont(new Font(15.0));
@@ -69,6 +73,8 @@ public class Set_Software {
         expiry_date.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(version,437.0);
@@ -77,6 +83,7 @@ public class Set_Software {
         AnchorPane.setRightAnchor(buy_date,437.0);
         AnchorPane.setRightAnchor(expiry_date,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(version,190.0);
@@ -85,6 +92,7 @@ public class Set_Software {
         AnchorPane.setTopAnchor(buy_date,273.0);
         AnchorPane.setTopAnchor(expiry_date,302.0);
         AnchorPane.setTopAnchor(Note,330.0);
+        AnchorPane.setTopAnchor(set_Date_la,330.0+166.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(version_tf,250.0);
@@ -93,7 +101,7 @@ public class Set_Software {
         AnchorPane.setLeftAnchor(buy_date_tf,250.0);
         AnchorPane.setLeftAnchor(expiry_date_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(version_tf,186.0);
@@ -102,6 +110,7 @@ public class Set_Software {
         AnchorPane.setTopAnchor(buy_date_tf,269.0);
         AnchorPane.setTopAnchor(expiry_date_tf,298.0);
         AnchorPane.setTopAnchor(Note_tf,327.0);
+        AnchorPane.setTopAnchor(set_Date_con,330.0+166.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -151,6 +160,7 @@ public class Set_Software {
                 sw.setExpiry_date(expiry_date_tf.getText());
                 sw.setKey(key_tf.getText());
                 sw.setVersion(version_tf.getText());
+                set_Date_con.setText(sw.getSetUpDate());
                 Main.user.add_password(sw);
                 add_list(choice_list,mid_list_items,sw);
                 add_button.setDisable(false);
@@ -170,7 +180,7 @@ public class Set_Software {
     public static void display_software(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Software software) {
         pre_set_software();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(name_tf,version_tf,key_tf,email_tf,buy_date_tf,expiry_date_tf,Note_tf,name,version,key,email,buy_date,expiry_date,Note,title);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,version_tf,key_tf,email_tf,buy_date_tf,expiry_date_tf,Note_tf,name,version,key,email,buy_date,expiry_date,Note,title);
         name_tf.setEditable(false);
         version_tf.setEditable(false);
         key_tf.setEditable(false);
@@ -198,7 +208,7 @@ public class Set_Software {
             pre_set_software();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name_tf,version_tf,key_tf,email_tf,buy_date_tf,expiry_date_tf,Note_tf,name,version,key,email,buy_date,expiry_date,Note,title);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,version_tf,key_tf,email_tf,buy_date_tf,expiry_date_tf,Note_tf,name,version,key,email,buy_date,expiry_date,Note,title);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

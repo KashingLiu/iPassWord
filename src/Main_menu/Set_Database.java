@@ -38,6 +38,10 @@ public class Set_Database {
     private static MenuButton type_mb = new MenuButton("类型",null,mi1,mi2,mi3,mi4,mi5,mi6,mi7,mi8);
     private static TextArea Note_tf = new TextArea();
 
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
+
     private static void pre_set_Database() {
         mi1.setOnAction((ActionEvent ae1)->{
             type_mb.setText(mi1.getText());
@@ -96,7 +100,8 @@ public class Set_Database {
         password.setStyle("-fx-text-fill:#707070");
         connection_options.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
-
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
         name.setFont(new Font(15.0));
         type.setFont(new Font(15.0));
@@ -106,6 +111,8 @@ public class Set_Database {
         password.setFont(new Font(15.0));
         connection_options.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         //nametf-type-server-port-username-password-option-note
 
@@ -117,6 +124,7 @@ public class Set_Database {
         AnchorPane.setRightAnchor(password,437.0);
         AnchorPane.setRightAnchor(connection_options,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(type,190.0);
@@ -126,6 +134,7 @@ public class Set_Database {
         AnchorPane.setTopAnchor(password,302.0);
         AnchorPane.setTopAnchor(connection_options,330.0);
         AnchorPane.setTopAnchor(Note,358.0);
+        AnchorPane.setTopAnchor(set_Date_la,524.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(type_mb,250.0);
@@ -135,6 +144,7 @@ public class Set_Database {
         AnchorPane.setLeftAnchor(password_tf,250.0);
         AnchorPane.setLeftAnchor(connection_options_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(type_mb,186.0);
@@ -144,6 +154,7 @@ public class Set_Database {
         AnchorPane.setTopAnchor(password_tf,298.0);
         AnchorPane.setTopAnchor(connection_options_tf,327.0);
         AnchorPane.setTopAnchor(Note_tf,360.0);
+        AnchorPane.setTopAnchor(set_Date_con,524.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -195,6 +206,7 @@ public class Set_Database {
                 db.setServer(server_tf.getText());
                 db.setType(type_mb.getText());
                 db.setUsername(username_tf.getText());
+                set_Date_con.setText(db.getSetUpDate());
                 Main.user.add_password(db);
                 add_list(choice_list,mid_list_items,db);
                 add_button.setDisable(false);
@@ -216,7 +228,7 @@ public class Set_Database {
     public static void display_Database(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Database database) {
         pre_set_Database();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
         name_tf.setEditable(false);
         server_tf.setEditable(false);
         port_tf.setEditable(false);
@@ -247,7 +259,7 @@ public class Set_Database {
             pre_set_Database();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

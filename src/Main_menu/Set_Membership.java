@@ -30,6 +30,9 @@ public class Set_Membership {
     private static Label title = new Label("会员信息");
 
     private static TextArea Note_tf = new TextArea();
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
 
     private static void pre_set_membership() {
         name_tf.setEditable(true);
@@ -67,7 +70,8 @@ public class Set_Membership {
         expiryDate.setStyle("-fx-text-fill:#707070");
         PIN.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
-
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
 
         name.setFont(new Font(15.0));
@@ -79,7 +83,8 @@ public class Set_Membership {
         PIN.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
-
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(site,437.0);
@@ -89,6 +94,7 @@ public class Set_Membership {
         AnchorPane.setRightAnchor(expiryDate,437.0);
         AnchorPane.setRightAnchor(PIN,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(site,190.0);
@@ -98,7 +104,7 @@ public class Set_Membership {
         AnchorPane.setTopAnchor(PIN,301.0);
         AnchorPane.setTopAnchor(expiryDate,330.0);
         AnchorPane.setTopAnchor(Note,358.0);
-
+        AnchorPane.setTopAnchor(set_Date_la,358.0+166.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(site_tf,250.0);
@@ -108,7 +114,7 @@ public class Set_Membership {
         AnchorPane.setLeftAnchor(expiryDate_tf,250.0);
         AnchorPane.setLeftAnchor(PIN_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(site_tf,186.0);
@@ -118,6 +124,7 @@ public class Set_Membership {
         AnchorPane.setTopAnchor(expiryDate_tf,297.0);
         AnchorPane.setTopAnchor(PIN_tf,327.0);
         AnchorPane.setTopAnchor(Note_tf,354.0);
+        AnchorPane.setTopAnchor(set_Date_con,358.0+166.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -170,6 +177,7 @@ public class Set_Membership {
                 ms.setPIN(PIN_tf.getText());
                 ms.setSite(site_tf.getText());
                 ms.setUsername(username_tf.getText());
+                set_Date_con.setText(ms.getSetUpDate());
                 Main.user.add_password(ms);
                 add_list(choice_list,mid_list_items,ms);
                 add_button.setDisable(false);
@@ -189,7 +197,7 @@ public class Set_Membership {
     public static void display_membership(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Membership membership) {
         pre_set_membership();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(name_tf,site_tf,PIN_tf,Phone_tf,
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,site_tf,PIN_tf,Phone_tf,
                 username_tf,joinDate_tf,expiryDate_tf,name,site,Phone,
                 username,joinDate,expiryDate,PIN,Note,title,Note_tf);
         name_tf.setEditable(false);
@@ -221,7 +229,7 @@ public class Set_Membership {
             pre_set_membership();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name_tf,site_tf,PIN_tf,Phone_tf,
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,site_tf,PIN_tf,Phone_tf,
                     username_tf,joinDate_tf,expiryDate_tf,name,site,Phone,
                     username,joinDate,expiryDate,PIN,Note,title,Note_tf);
 

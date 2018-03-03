@@ -31,22 +31,24 @@ public class Set_WiFi {
     private static MenuItem mi4 = new MenuItem("WPA");
     private static MenuItem mi5 = new MenuItem("WEP");
     private static MenuButton WiFi_security_mb = new MenuButton("加密方式",null,mi1,mi2,mi3,mi4,mi5);
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
 
     private static void pre_set_WiFi() {
 
-        mi1.setOnAction((ActionEvent ace)->{
+        mi1.setOnAction((ace)->{
             WiFi_security_mb.setText(mi1.getText());
         });
-        mi2.setOnAction((ActionEvent ace)->{
+        mi2.setOnAction((ace1)->{
             WiFi_security_mb.setText(mi2.getText());
         });
-        mi3.setOnAction((ActionEvent ace)->{
+        mi3.setOnAction((ace2)->{
             WiFi_security_mb.setText(mi3.getText());
         });
-        mi4.setOnAction((ActionEvent ace)->{
+        mi4.setOnAction((ace3)->{
             WiFi_security_mb.setText(mi4.getText());
         });
-        mi5.setOnAction((ActionEvent ace)->{
+        mi5.setOnAction((ace4)->{
             WiFi_security_mb.setText(mi5.getText());
         });
 
@@ -85,6 +87,8 @@ public class Set_WiFi {
         WiFi_security.setStyle("-fx-text-fill:#707070");
         WiFi_Password_add.setStyle("-fx-text-fill:#707070");
         WiFi_Note.setStyle("-fx-text-fill:#707070");
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
         //字体大小
         WiFi_name.setFont(new Font(15.0));
@@ -94,6 +98,8 @@ public class Set_WiFi {
         WiFi_security.setFont(new Font(15.0));
         WiFi_Password_add.setFont(new Font(15.0));
         WiFi_Note.setFont(new Font(15.0));
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         //设置标题和文本框位置
         AnchorPane.setRightAnchor(WiFi_name,437.0);
@@ -103,6 +109,8 @@ public class Set_WiFi {
         AnchorPane.setRightAnchor(WiFi_security,437.0);
         AnchorPane.setRightAnchor(WiFi_Password_add,437.0);
         AnchorPane.setRightAnchor(WiFi_Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
+
         AnchorPane.setTopAnchor(WiFi_name,162.0);
         AnchorPane.setTopAnchor(WiFi_SSID,190.0);
         AnchorPane.setTopAnchor(WiFi_Password,218.0);
@@ -110,6 +118,8 @@ public class Set_WiFi {
         AnchorPane.setTopAnchor(WiFi_ServerIP,274.0);
         AnchorPane.setTopAnchor(WiFi_Password_add,302.0);
         AnchorPane.setTopAnchor(WiFi_Note,330.0);
+        AnchorPane.setTopAnchor(set_Date_la,330.0+166.0);
+
         AnchorPane.setLeftAnchor(WiFi_name_tf,250.0);
         AnchorPane.setLeftAnchor(WiFi_Password_tf,250.0);
         AnchorPane.setLeftAnchor(WiFi_ServerIP_tf,250.0);
@@ -117,6 +127,8 @@ public class Set_WiFi {
         AnchorPane.setLeftAnchor(WiFi_security_mb,250.0);
         AnchorPane.setLeftAnchor(WiFi_Password_add_tf,250.0);
         AnchorPane.setLeftAnchor(WiFi_Note_tf,250.0);
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
+
         AnchorPane.setTopAnchor(WiFi_name_tf,158.0);
         AnchorPane.setTopAnchor(WiFi_SSID_tf,186.0);
         AnchorPane.setTopAnchor(WiFi_Password_tf,214.0);
@@ -124,6 +136,7 @@ public class Set_WiFi {
         AnchorPane.setTopAnchor(WiFi_ServerIP_tf,271.0);
         AnchorPane.setTopAnchor(WiFi_Password_add_tf,298.0);
         AnchorPane.setTopAnchor(WiFi_Note_tf,329.0);
+        AnchorPane.setTopAnchor(set_Date_con,330.0+166.0);
         WiFi_Note_tf.setPrefSize(350,138);
         WiFi_title.fontProperty().setValue(new Font("System",20));
         WiFi_title.setLayoutX(244.0);
@@ -179,6 +192,7 @@ public class Set_WiFi {
                 wr.setSecurity(WiFi_security);
                 wr.setSSID(WiFi_SSID_tf.getText());
                 wr.setServerIP(WiFi_ServerIP_tf.getText());
+                set_Date_con.setText(wr.getSetUpDate());
                 Main.user.add_password(wr);
                 add_list(choice_list,mid_list_items,wr);
                 add_button.setDisable(false);
@@ -200,7 +214,10 @@ public class Set_WiFi {
     public static void display_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, WirelessRouter password) {
         main_page.getChildren().clear();
         pre_set_WiFi();
-        main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+                WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
+                WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,
+                WiFi_Password_add_tf,WiFi_Note_tf);
         WiFi_name_tf.setEditable(false);
         WiFi_SSID_tf.setEditable(false);
         WiFi_Password_tf.setEditable(false);
@@ -230,8 +247,10 @@ public class Set_WiFi {
             pre_set_WiFi();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
-
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+                    WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
+                    WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,
+                    WiFi_Password_add_tf,WiFi_Note_tf);
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
 

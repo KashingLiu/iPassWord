@@ -31,6 +31,9 @@ public class Set_Passport {
     private static Label Note = new Label("备注");
     private static Label title = new Label("护照信息");
     private static TextArea Note_tf = new TextArea();
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
 
     private static void pre_set_passport() {
         name_tf.setEditable(true);
@@ -72,7 +75,8 @@ public class Set_Passport {
         issued_date.setStyle("-fx-text-fill:#707070");
         expiry_date.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
-
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
 
         name.setFont(new Font(15.0));
@@ -85,7 +89,8 @@ public class Set_Passport {
         expiry_date.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
-
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(full_name,437.0);
@@ -96,6 +101,7 @@ public class Set_Passport {
         AnchorPane.setRightAnchor(issued_date,437.0);
         AnchorPane.setRightAnchor(expiry_date,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(full_name,190.0);
@@ -106,6 +112,7 @@ public class Set_Passport {
         AnchorPane.setTopAnchor(issued_date,330.0);
         AnchorPane.setTopAnchor(expiry_date,358.0);
         AnchorPane.setTopAnchor(Note,386.0);
+        AnchorPane.setTopAnchor(set_Date_la,386.0+166.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(full_name_tf,250.0);
@@ -116,7 +123,7 @@ public class Set_Passport {
         AnchorPane.setLeftAnchor(issued_date_tf,250.0);
         AnchorPane.setLeftAnchor(expiry_date_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(full_name_tf,186.0);
@@ -127,6 +134,7 @@ public class Set_Passport {
         AnchorPane.setTopAnchor(issued_date_tf,327.0);
         AnchorPane.setTopAnchor(expiry_date_tf,354.0);
         AnchorPane.setTopAnchor(Note_tf,382.0);
+        AnchorPane.setTopAnchor(set_Date_con,386.0+166.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -178,7 +186,7 @@ public class Set_Passport {
                 pp.setFull_name(full_name_tf.getText());
                 pp.setIssued_date(issued_date_tf.getText());
                 pp.setNationality(nationality_tf.getText());
-
+                set_Date_con.setText(pp.getSetUpDate());
                 Main.user.add_password(pp);
                 add_list(choice_list,mid_list_items,pp);
                 add_button.setDisable(false);
@@ -198,7 +206,7 @@ public class Set_Passport {
     public static void display_passport(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Passport passport) {
         pre_set_passport();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(name,name_tf,Note,Note_tf,title,full_name,full_name_tf,nationality,nationality_tf,authority,authority_tf,birthday,birthday_tf,address,address_tf,issued_date,issued_date_tf,expiry_date,expiry_date_tf);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,name,name_tf,Note,Note_tf,title,full_name,full_name_tf,nationality,nationality_tf,authority,authority_tf,birthday,birthday_tf,address,address_tf,issued_date,issued_date_tf,expiry_date,expiry_date_tf);
         name_tf.setEditable(false);
         full_name_tf.setEditable(false);
         nationality_tf.setEditable(false);
@@ -230,7 +238,7 @@ public class Set_Passport {
             pre_set_passport();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name,name_tf,Note,Note_tf,title,full_name,full_name_tf,nationality,nationality_tf,authority,authority_tf,birthday,birthday_tf,address,address_tf,issued_date,issued_date_tf,expiry_date,expiry_date_tf);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,name,name_tf,Note,Note_tf,title,full_name,full_name_tf,nationality,nationality_tf,authority,authority_tf,birthday,birthday_tf,address,address_tf,issued_date,issued_date_tf,expiry_date,expiry_date_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

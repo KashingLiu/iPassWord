@@ -42,6 +42,9 @@ public class Set_Bankaccount {
     private static MenuItem mi6 = new MenuItem("其他");
     private static MenuButton type_mb = new MenuButton("类型",null,mi1,mi2,mi3,mi4,mi5,mi6);
 
+    private static Label set_Date_la = new Label("创建日期");
+    private static Label set_Date_con = new Label();
+
     private static void pre_set_bankaccount() {
         mi1.setOnAction((ActionEvent ae1)->{
             type_mb.setText(mi1.getText());
@@ -105,6 +108,8 @@ public class Set_Bankaccount {
         Phone.setStyle("-fx-text-fill:#707070");
         address.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
+        set_Date_la.setStyle("-fx-text-fill:#707070");
+        set_Date_con.setStyle("-fx-text-fill:#707070");
 
         name.setFont(new Font(15.0));
         account.setFont(new Font(15.0));
@@ -117,6 +122,8 @@ public class Set_Bankaccount {
         address.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
+        set_Date_la.setFont(new Font(15.0));
+        set_Date_con.setFont(new Font(15.0));
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(account,437.0);
@@ -128,6 +135,7 @@ public class Set_Bankaccount {
         AnchorPane.setRightAnchor(Phone,437.0);
         AnchorPane.setRightAnchor(address,437.0);
         AnchorPane.setRightAnchor(Note,437.0);
+        AnchorPane.setRightAnchor(set_Date_la,437.0);
 
         AnchorPane.setTopAnchor(name,162.0);
         AnchorPane.setTopAnchor(account,190.0);
@@ -139,6 +147,7 @@ public class Set_Bankaccount {
         AnchorPane.setTopAnchor(Phone,358.0);
         AnchorPane.setTopAnchor(address,386.0);
         AnchorPane.setTopAnchor(Note,414.0);
+        AnchorPane.setTopAnchor(set_Date_la,580.0);
 
         AnchorPane.setLeftAnchor(name_tf,250.0);
         AnchorPane.setLeftAnchor(account_tf,250.0);
@@ -150,7 +159,7 @@ public class Set_Bankaccount {
         AnchorPane.setLeftAnchor(Phone_tf,250.0);
         AnchorPane.setLeftAnchor(address_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
+        AnchorPane.setLeftAnchor(set_Date_con,250.0);
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(account_tf,186.0);
@@ -162,6 +171,7 @@ public class Set_Bankaccount {
         AnchorPane.setTopAnchor(Phone_tf,354.0);
         AnchorPane.setTopAnchor(address_tf,382.0);
         AnchorPane.setTopAnchor(Note_tf,414.0);
+        AnchorPane.setTopAnchor(set_Date_con,580.0);
         Note_tf.setPrefSize(350,138);
 
         title.fontProperty().setValue(new Font("System",20));
@@ -172,6 +182,7 @@ public class Set_Bankaccount {
         AnchorPane.setRightAnchor(title,255.0);
         AnchorPane.setBottomAnchor(title,575.0);
     }
+
     public static void set_bankaccount(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Button add_button, AnchorPane main_page, AnchorPane bottom_page) {
         GlobalMenu.BankMenuItem.setOnAction((ActionEvent event1)->{
             main_page.getChildren().clear();
@@ -214,6 +225,7 @@ public class Set_Bankaccount {
                 ba.setPIN(PIN_tf.getText());
                 ba.setSwift(Swift_tf.getText());
                 ba.setType(type_mb.getText());
+                set_Date_con.setText(ba.getSetUpDate());
                 Main.user.add_password(ba);
                 add_list(choice_list,mid_list_items,ba);
                 add_button.setDisable(false);
@@ -233,7 +245,7 @@ public class Set_Bankaccount {
     public static void display_bankaccount(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, BankAccount bankAccount) {
         pre_set_bankaccount();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
+        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
         name_tf.setEditable(false);
         account_tf.setEditable(false);
         type_tf.setEditable(false);
@@ -269,7 +281,7 @@ public class Set_Bankaccount {
             pre_set_bankaccount();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
+            main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
