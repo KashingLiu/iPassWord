@@ -1,7 +1,8 @@
 package Util;
 
+
+
 public class WirelessRouter extends Password {
-//    private String name;            //全名
     private String Password;        //无线网络密码
     private String ServerIP;        //服务器/IP地址
     private String SSID;            //网络名称
@@ -28,6 +29,7 @@ public class WirelessRouter extends Password {
     public void setSSID(String SSID) {
         this.SSID = SSID;
     }
+    public void setNote(String Note) {this.Note = Note;}
     public String getName() {
         return name;
     }
@@ -46,5 +48,5 @@ public class WirelessRouter extends Password {
     public String getSSID() {
         return SSID;
     }
-
+    public String getNote() {return Note;}
 }

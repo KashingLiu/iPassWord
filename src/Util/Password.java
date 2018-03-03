@@ -8,6 +8,7 @@ public class Password {
     public String Note;                    //备注
     public String tag;                     //项目标识
     public String SetUpDate;               //添加这个项目的日期
+    public String lastDate;                 //上次修改日期
     public Password(String name, String Note, String tag) {
         this.name = name;
         this.Note = Note;
@@ -22,5 +23,32 @@ public class Password {
     }
     public String getTag() {
         return tag;
+    }
+    public String getLastDate() {
+        return lastDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNote(String note) {
+        Note = note;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public void setSetUpDate(String setUpDate) {
+        SetUpDate = setUpDate;
+    }
+
+    public void setLastDate(String lastDate) {
+        this.lastDate = lastDate;
     }
 }

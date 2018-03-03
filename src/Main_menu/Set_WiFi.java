@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
 public class Set_WiFi {
-    private static TextField WiFi_title = new TextField("Wireless Router");
+    private static Label WiFi_title = new Label("无线路由器");
     private static Label WiFi_name = new Label("全名");               //全名
     private static Label WiFi_Password = new Label("无线网络密码");    //无线网络密码
     private static Label WiFi_ServerIP = new Label("服务器/IP地址");   //服务器/IP地址
@@ -19,7 +19,7 @@ public class Set_WiFi {
     private static Label WiFi_Password_add = new Label("附加密码");    //附加密码
     private static Label WiFi_Note = new Label("备注");
     private static TextField WiFi_name_tf = new TextField();
-    private static PasswordField WiFi_Password_tf = new PasswordField();
+    private static TextField WiFi_Password_tf = new TextField();
     private static TextField WiFi_ServerIP_tf = new TextField();
     private static TextField WiFi_SSID_tf = new TextField();
     private static MenuButton WiFi_security_mb = new MenuButton();
@@ -28,7 +28,6 @@ public class Set_WiFi {
     private static TextArea WiFi_Note_tf = new TextArea();
 
     private static void pre_set_WiFi() {
-
         //预先把这些tf设置成可编辑，内容为空
         WiFi_name_tf.setEditable(true);
         WiFi_SSID_tf.setEditable(true);
@@ -104,7 +103,6 @@ public class Set_WiFi {
         AnchorPane.setTopAnchor(WiFi_Password_add_tf,298.0);
         AnchorPane.setTopAnchor(WiFi_Note_tf,329.0);
         WiFi_Note_tf.setPrefSize(350,138);
-        WiFi_title.setStyle("-fx-background-color: white;");
         WiFi_title.fontProperty().setValue(new Font("System",20));
         WiFi_title.setLayoutX(244.0);
         WiFi_title.setLayoutY(94.0);
@@ -118,9 +116,10 @@ public class Set_WiFi {
     //点击WiFi那个menu之后进入的设置页面
     public static void set_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page) {
         GlobalMenu.WiFiMenuItem.setOnAction((ActionEvent event1)->{
-            main_page.getChildren().removeAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+            main_page.getChildren().clear();
             pre_set_WiFi();
             add_button.setDisable(true);
+            choice_list.setDisable(true);
             main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
 
             Button ok = new Button("保存");
@@ -131,9 +130,10 @@ public class Set_WiFi {
 
             //取消按钮
             cancel.setOnAction((ActionEvent action)->{
-                main_page.getChildren().removeAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+                main_page.getChildren().clear();
                 add_button.setDisable(false);
                 bottom_page.getChildren().removeAll(cancel,ok);
+                choice_list.setDisable(false);
             });
 
             //保存按钮
@@ -156,7 +156,8 @@ public class Set_WiFi {
                 Main.user.add_password(wr);
                 add_list(choice_list,mid_list_items,wr);
                 add_button.setDisable(false);
-                main_page.getChildren().removeAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+                choice_list.setDisable(false);
+                main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
             });
             bottom_page.getChildren().addAll(cancel,ok);
@@ -166,16 +167,13 @@ public class Set_WiFi {
     }
 
     public static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-        choice_list.setItems(null);
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
 
-    public static void display_WiFi(AnchorPane main_page, WirelessRouter password) {
+    public static void display_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, WirelessRouter password) {
+        main_page.getChildren().clear();
         pre_set_WiFi();
-
-
-        main_page.getChildren().removeAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
         main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
         WiFi_name_tf.setEditable(false);
         WiFi_SSID_tf.setEditable(false);
@@ -197,6 +195,82 @@ public class Set_WiFi {
         AnchorPane.setLeftAnchor(WiFi_security_tf,250.0);
         AnchorPane.setTopAnchor(WiFi_security_tf,242.0);
 
-    }
+        Button change = new Button("编辑");
+        Button delete = new Button("删除");
 
+        change.setOnAction((ActionEvent ae) -> {
+            bottom_page.getChildren().removeAll(change, delete);
+            main_page.getChildren().clear();
+            pre_set_WiFi();
+            add_button.setDisable(true);
+            choice_list.setDisable(true);
+            main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+
+            Button ok = new Button("保存");
+            Button cancel = new Button("取消");
+
+            AnchorPane.setBottomAnchor(cancel,5.0);
+            AnchorPane.setRightAnchor(cancel,166.0);
+
+            //取消按钮
+            cancel.setOnAction((ActionEvent action)->{
+                main_page.getChildren().clear();
+                add_button.setDisable(false);
+                bottom_page.getChildren().removeAll(cancel,ok);
+                choice_list.setDisable(false);
+            });
+
+            //保存按钮
+            ok.setOnAction((ActionEvent action2)->{
+                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
+                String name_input = WiFi_name_tf.getText();
+                String Note_input = WiFi_Note_tf.getText();
+                if (name_input.equals("")) {
+                    name_input = "无线路由器";
+                }
+                if (Note_input.equals("")) {
+                    Note_input = "";
+                }
+                password.setName(name_input);
+                password.setNote(Note_input);
+                password.setPassword(WiFi_Password_tf.getText());
+                password.setPassword_add(WiFi_Password_add_tf.getText());
+                password.setSecurity(WiFi_security_mb.getText());
+                password.setSSID(WiFi_SSID_tf.getText());
+                password.setServerIP(WiFi_ServerIP_tf.getText());
+                add_button.setDisable(false);
+                choice_list.setDisable(false);
+                main_page.getChildren().clear();
+                bottom_page.getChildren().removeAll(ok,cancel);
+                mid_list_items.clear();
+                mid_list_items.addAll(Main.user.all_passwords);
+                choice_list.setItems(mid_list_items);
+            });
+            bottom_page.getChildren().addAll(cancel,ok);
+            AnchorPane.setBottomAnchor(ok,5.0);
+            AnchorPane.setRightAnchor(ok,100.0);
+
+            WiFi_name_tf.setText(password.getName());
+            WiFi_SSID_tf.setText(password.getSSID());
+            WiFi_Password_tf.setText(password.getPassword());
+            WiFi_security_tf.setText(password.getSecurity());
+            WiFi_ServerIP_tf.setText(password.getServerIP());
+            WiFi_Password_add_tf.setText(password.getPassword_add());
+            WiFi_Note_tf.setText(password.getNote());
+            choice_list.setItems(mid_list_items);
+        });
+
+        delete.setOnAction((ActionEvent ae1)->{
+            bottom_page.getChildren().removeAll(change, delete);
+            Main.user.all_passwords.remove(password);
+            mid_list_items.remove(password);
+            choice_list.setItems(mid_list_items);
+        });
+
+        AnchorPane.setBottomAnchor(delete,5.0);
+        AnchorPane.setRightAnchor(delete,166.0);
+        bottom_page.getChildren().addAll(delete,change);
+        AnchorPane.setBottomAnchor(change,5.0);
+        AnchorPane.setRightAnchor(change,100.0);
+    }
 }
