@@ -22,12 +22,34 @@ public class Set_WiFi {
     private static TextField WiFi_Password_tf = new TextField();
     private static TextField WiFi_ServerIP_tf = new TextField();
     private static TextField WiFi_SSID_tf = new TextField();
-    private static MenuButton WiFi_security_mb = new MenuButton();
     private static TextField WiFi_security_tf = new TextField();
     private static TextField WiFi_Password_add_tf = new TextField();
     private static TextArea WiFi_Note_tf = new TextArea();
+    private static MenuItem mi1 = new MenuItem("无");
+    private static MenuItem mi2 = new MenuItem("WPA2 个人");
+    private static MenuItem mi3 = new MenuItem("WPA2 企业");
+    private static MenuItem mi4 = new MenuItem("WPA");
+    private static MenuItem mi5 = new MenuItem("WEP");
+    private static MenuButton WiFi_security_mb = new MenuButton("加密方式",null,mi1,mi2,mi3,mi4,mi5);
 
     private static void pre_set_WiFi() {
+
+        mi1.setOnAction((ActionEvent ace)->{
+            WiFi_security_mb.setText(mi1.getText());
+        });
+        mi2.setOnAction((ActionEvent ace)->{
+            WiFi_security_mb.setText(mi2.getText());
+        });
+        mi3.setOnAction((ActionEvent ace)->{
+            WiFi_security_mb.setText(mi3.getText());
+        });
+        mi4.setOnAction((ActionEvent ace)->{
+            WiFi_security_mb.setText(mi4.getText());
+        });
+        mi5.setOnAction((ActionEvent ace)->{
+            WiFi_security_mb.setText(mi5.getText());
+        });
+
         //预先把这些tf设置成可编辑，内容为空
         WiFi_name_tf.setEditable(true);
         WiFi_SSID_tf.setEditable(true);
@@ -141,16 +163,20 @@ public class Set_WiFi {
                 //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
                 String name_input = WiFi_name_tf.getText();
                 String Note_input = WiFi_Note_tf.getText();
+                String WiFi_security = WiFi_security_mb.getText();
                 if (name_input.equals("")) {
                     name_input = "无线路由器";
                 }
                 if (Note_input.equals("")) {
                     Note_input = "";
                 }
+                if (WiFi_security.equals("加密方式")) {
+                    WiFi_security = "无";
+                }
                 Util.WirelessRouter wr = new Util.WirelessRouter(name_input, Note_input);
                 wr.setPassword(WiFi_Password_tf.getText());
                 wr.setPassword_add(WiFi_Password_add_tf.getText());
-                wr.setSecurity(WiFi_security_mb.getText());
+                wr.setSecurity(WiFi_security);
                 wr.setSSID(WiFi_SSID_tf.getText());
                 wr.setServerIP(WiFi_ServerIP_tf.getText());
                 Main.user.add_password(wr);
@@ -223,25 +249,23 @@ public class Set_WiFi {
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
                 //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = WiFi_name_tf.getText();
-                String Note_input = WiFi_Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "无线路由器";
+                String WiFi_security = WiFi_security_mb.getText();
+                if (WiFi_security.equals("加密方式")) {
+                    WiFi_security = "无";
                 }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                password.setName(name_input);
-                password.setNote(Note_input);
-                password.setPassword(WiFi_Password_tf.getText());
-                password.setPassword_add(WiFi_Password_add_tf.getText());
-                password.setSecurity(WiFi_security_mb.getText());
+                password.setName(WiFi_name_tf.getText());
                 password.setSSID(WiFi_SSID_tf.getText());
+                password.setPassword(WiFi_Password_tf.getText());
+                password.setSecurity(WiFi_security);
                 password.setServerIP(WiFi_ServerIP_tf.getText());
+                password.setPassword_add(WiFi_Password_add_tf.getText());
+                password.setNote(WiFi_Note_tf.getText());
+
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
+                mid_list_items.removeAll(Main.user.all_passwords);
                 mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);

@@ -183,7 +183,6 @@ public class Set_Membership {
         });
     }
     private static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
@@ -242,27 +241,18 @@ public class Set_Membership {
 
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
-                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "会员信息";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                Membership ms = new Membership(name_input, Note_input);
-                ms.setExpiryDate(expiryDate_tf.getText());
-                ms.setJoinDate(joinDate_tf.getText());
-                ms.setPhone(Phone_tf.getText());
-                ms.setPIN(PIN_tf.getText());
-                ms.setSite(site_tf.getText());
-                ms.setUsername(username_tf.getText());
+                membership.setName(membership.getname());
+                membership.setExpiryDate(expiryDate_tf.getText());
+                membership.setJoinDate(joinDate_tf.getText());
+                membership.setPhone(Phone_tf.getText());
+                membership.setPIN(PIN_tf.getText());
+                membership.setSite(site_tf.getText());
+                membership.setUsername(username_tf.getText());
+                membership.setNote(Note_tf.getText());
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });

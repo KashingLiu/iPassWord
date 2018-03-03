@@ -11,7 +11,6 @@ import javafx.scene.text.Font;
 
 public class Set_Database {
     private static TextField name_tf = new TextField();
-    private static MenuButton type_mb = new MenuButton();
     private static TextField server_tf = new TextField();
     private static TextField port_tf = new TextField();
     private static TextField username_tf = new TextField();
@@ -28,10 +27,42 @@ public class Set_Database {
     private static Label connection_options = new Label("连接选项");
     private static Label Note = new Label("备注");
     private static Label title = new Label("数据库");
-
+    private static MenuItem mi1 = new MenuItem("DB2");
+    private static MenuItem mi2 = new MenuItem("Microsoft Access");
+    private static MenuItem mi3 = new MenuItem("MS SQL Server");
+    private static MenuItem mi4 = new MenuItem("MySQL");
+    private static MenuItem mi5 = new MenuItem("Oracle");
+    private static MenuItem mi6 = new MenuItem("PostgreSQL");
+    private static MenuItem mi7 = new MenuItem("SQLite");
+    private static MenuItem mi8 = new MenuItem("其他");
+    private static MenuButton type_mb = new MenuButton("类型",null,mi1,mi2,mi3,mi4,mi5,mi6,mi7,mi8);
     private static TextArea Note_tf = new TextArea();
 
     private static void pre_set_Database() {
+        mi1.setOnAction((ActionEvent ae1)->{
+            type_mb.setText(mi1.getText());
+        });
+        mi2.setOnAction((ActionEvent ae2)->{
+            type_mb.setText(mi2.getText());
+        });
+        mi3.setOnAction((ActionEvent ae3)->{
+            type_mb.setText(mi3.getText());
+        });
+        mi4.setOnAction((ActionEvent ae4)->{
+            type_mb.setText(mi4.getText());
+        });
+        mi5.setOnAction((ActionEvent ae5)->{
+            type_mb.setText(mi5.getText());
+        });
+        mi6.setOnAction((ActionEvent ae6)->{
+            type_mb.setText(mi6.getText());
+        });
+        mi7.setOnAction((ActionEvent ae7)->{
+            type_mb.setText(mi7.getText());
+        });
+        mi8.setOnAction((ActionEvent ae8)->{
+            type_mb.setText(mi8.getText());
+        });
         name_tf.setEditable(true);
         server_tf.setEditable(true);
         port_tf.setEditable(true);
@@ -178,7 +209,6 @@ public class Set_Database {
     }
 
     private static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
@@ -235,27 +265,18 @@ public class Set_Database {
 
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
-                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "数据库";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                Util.Database db = new Util.Database(name_input, Note_input);
-                db.setConnection_options(connection_options_tf.getText());
-                db.setPassword(password_tf.getText());
-                db.setPort(port_tf.getText());
-                db.setServer(server_tf.getText());
-                db.setType(type_mb.getText());
-                db.setUsername(username_tf.getText());
+                database.setName(name_tf.getText());
+                database.setConnection_options(connection_options_tf.getText());
+                database.setPassword(password_tf.getText());
+                database.setPort(port_tf.getText());
+                database.setServer(server_tf.getText());
+                database.setType(type_mb.getText());
+                database.setUsername(username_tf.getText());
+                database.setNote(Note_tf.getText());
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });
@@ -280,8 +301,8 @@ public class Set_Database {
 
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
-            Main.user.all_passwords.remove(password);
-            mid_list_items.remove(password);
+            Main.user.all_passwords.remove(database);
+            mid_list_items.remove(database);
             choice_list.setItems(mid_list_items);
         });
 

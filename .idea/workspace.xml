@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Login.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/Set_server.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/BankAccount.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/GiftCard.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Login.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Membership.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Passport.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Server.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Software.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Main_menu.fxml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/src/Main_menu/Controller.java" afterPath="$PROJECT_DIR$/src/Main_menu/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Database.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Login.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Login.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Software.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Database.java" afterPath="$PROJECT_DIR$/src/Util/Database.java" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Password.java" afterPath="$PROJECT_DIR$/src/Util/Password.java" />
-      <change beforePath="$PROJECT_DIR$/src/Util/WirelessRouter.java" afterPath="$PROJECT_DIR$/src/Util/WirelessRouter.java" />
-      <change beforePath="$PROJECT_DIR$/src/Util/icon/3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Util/icon/4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Util/icon/5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Util/icon/icons8-database-64.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Util/icon/icons8-server-64.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_server.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_server.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +72,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="168" column="59" lean-forward="false" selection-start-line="168" selection-start-column="59" selection-end-line="168" selection-end-column="59" />
+            <state relative-caret-position="166">
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#GlobalMenu#0" expanded="false" />
@@ -101,86 +83,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set_Bankaccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="206" column="126" lean-forward="false" selection-start-line="206" selection-start-column="126" selection-end-line="206" selection-end-column="126" />
-              <folding>
-                <element signature="e#11262#11505#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_Giftcard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="192" column="126" lean-forward="false" selection-start-line="192" selection-start-column="126" selection-end-line="192" selection-end-column="126" />
-              <folding>
-                <element signature="e#10372#10615#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-              <folding>
-                <element signature="e#7347#7590#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_Membership.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Membership.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#9708#9951#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_Passport.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Passport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-              <folding>
-                <element signature="e#10747#10990#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_server.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-              <folding>
-                <element signature="e#11871#12115#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Set_Software.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Software.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+            <state relative-caret-position="640">
+              <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding>
-                <element signature="e#8882#9125#0" expanded="false" />
+                <element signature="e#8881#9124#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set_Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="58" selection-end-column="11" />
+              <folding>
+                <element signature="e#11166#11409#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -189,12 +110,20 @@
       <file leaf-file-name="Set_WiFi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="168" column="125" lean-forward="false" selection-start-line="168" selection-start-column="125" selection-end-line="168" selection-end-column="125" />
+            <state relative-caret-position="177">
+              <caret line="119" column="36" lean-forward="false" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set_Bankaccount.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="336" column="5" lean-forward="false" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
               <folding>
-                <element signature="e#9430#12328#0" expanded="false" />
-                <element signature="e#10176#10419#0" expanded="false" />
-                <element signature="e#12359#12603#0" expanded="false" />
+                <element signature="e#12227#12470#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -218,6 +147,9 @@
       <find>Bank</find>
       <find>database</find>
       <find>add_list</find>
+      <find>clear</find>
+      <find>mb</find>
+      <find>_mb</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -274,17 +206,17 @@
         <option value="$PROJECT_DIR$/src/Util/Passport.java" />
         <option value="$PROJECT_DIR$/src/Util/WirelessRouter.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
+        <option value="$PROJECT_DIR$/src/Util/Password.java" />
+        <option value="$PROJECT_DIR$/src/Util/BankAccount.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Login.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
-        <option value="$PROJECT_DIR$/src/Util/Password.java" />
-        <option value="$PROJECT_DIR$/src/Util/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_server.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
       </list>
     </option>
   </component>
@@ -296,8 +228,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="371" />
-    <option name="y" value="46" />
+    <option name="x" value="314" />
+    <option name="y" value="23" />
     <option name="width" value="1276" />
     <option name="height" value="777" />
   </component>
@@ -590,7 +522,7 @@
       <workItem from="1519527783609" duration="78000" />
       <workItem from="1519528139906" duration="9134000" />
       <workItem from="1519628252589" duration="23810000" />
-      <workItem from="1519716108260" duration="88620000" />
+      <workItem from="1519716108260" duration="91904000" />
     </task>
     <task id="LOCAL-00001" summary="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来">
       <created>1519869271520</created>
@@ -620,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519973858476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="~">
+      <created>1520058737168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520058737168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124258000" />
+    <option name="totallyTimeSpent" value="127542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -674,9 +613,9 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来" />
-    <MESSAGE value="~" />
     <MESSAGE value="增加了八个类别信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了八个类别信息" />
+    <MESSAGE value="~" />
+    <option name="LAST_COMMIT_MESSAGE" value="~" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1198,102 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="168" column="59" lean-forward="false" selection-start-line="168" selection-start-column="59" selection-end-line="168" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#GlobalMenu#0" expanded="false" />
-            <element signature="method#GlobalMenu#0;class#GlobalMenu#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="180" column="8" lean-forward="false" selection-start-line="180" selection-start-column="8" selection-end-line="180" selection-end-column="8" />
-          <folding>
-            <element signature="e#9842#10085#0" expanded="false" />
-            <element signature="e#12128#12372#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="206" column="126" lean-forward="false" selection-start-line="206" selection-start-column="126" selection-end-line="206" selection-end-column="126" />
-          <folding>
-            <element signature="e#11262#11505#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="192" column="126" lean-forward="false" selection-start-line="192" selection-start-column="126" selection-end-line="192" selection-end-column="126" />
-          <folding>
-            <element signature="e#10372#10615#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding>
-            <element signature="e#7347#7590#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Membership.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#9708#9951#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Passport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-          <folding>
-            <element signature="e#10747#10990#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Software.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding>
-            <element signature="e#8882#9125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="168" column="125" lean-forward="false" selection-start-line="168" selection-start-column="125" selection-end-line="168" selection-end-column="125" />
-          <folding>
-            <element signature="e#9430#12328#0" expanded="false" />
-            <element signature="e#10176#10419#0" expanded="false" />
-            <element signature="e#12359#12603#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Password.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1327,12 +1170,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#GlobalMenu#0" expanded="false" />
+            <element signature="method#GlobalMenu#0;class#GlobalMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="196" column="47" lean-forward="false" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
+          <folding>
+            <element signature="e#7346#7589#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Membership.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="250" column="52" lean-forward="false" selection-start-line="250" selection-start-column="52" selection-end-line="250" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9707#9950#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Passport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="251" column="50" lean-forward="false" selection-start-line="251" selection-start-column="50" selection-end-line="251" selection-end-column="50" />
+          <folding>
+            <element signature="e#10746#10989#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Software.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="204" column="0" lean-forward="true" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <element signature="e#8881#9124#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <folding>
+            <element signature="e#10372#10615#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="119" column="36" lean-forward="false" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        <state relative-caret-position="144">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="e#11871#12115#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="58" selection-end-column="11" />
+          <folding>
+            <element signature="e#11166#11409#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="336" column="5" lean-forward="false" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
+          <folding>
+            <element signature="e#12227#12470#0" expanded="false" />
           </folding>
         </state>
       </provider>

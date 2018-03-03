@@ -164,7 +164,6 @@ public class Set_Software {
         });
     }
     private static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
@@ -218,25 +217,17 @@ public class Set_Software {
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
                 //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "软件许可证";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                Software sw = new Software(name_input, Note_input);
-                sw.setBuy_date(buy_date_tf.getText());
-                sw.setEmail(email_tf.getText());
-                sw.setExpiry_date(expiry_date_tf.getText());
-                sw.setKey(key_tf.getText());
-                sw.setVersion(version_tf.getText());
+                software.setName(name_tf.getText());
+                software.setNote(Note_tf.getText());
+                software.setBuy_date(buy_date_tf.getText());
+                software.setEmail(email_tf.getText());
+                software.setExpiry_date(expiry_date_tf.getText());
+                software.setKey(key_tf.getText());
+                software.setVersion(version_tf.getText());
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });

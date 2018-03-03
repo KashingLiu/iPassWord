@@ -70,7 +70,6 @@ public class Set_server {
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
 
-
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(username,437.0);
         AnchorPane.setRightAnchor(password,437.0);
@@ -94,7 +93,6 @@ public class Set_server {
         AnchorPane.setLeftAnchor(console_username_tf,250.0);
         AnchorPane.setLeftAnchor(console_password_tf,250.0);
         AnchorPane.setLeftAnchor(Note_tf,250.0);
-
 
         AnchorPane.setTopAnchor(name_tf,158.0);
         AnchorPane.setTopAnchor(username_tf,186.0);
@@ -169,7 +167,6 @@ public class Set_server {
         });
     }
     private static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
@@ -226,26 +223,17 @@ public class Set_server {
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
                 //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "服务器";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-
-                Server sv = new Server(name_input, Note_input);
-                sv.setUsername(username_tf.getText());
-                sv.setPassword(password_tf.getText());
-                sv.setIP(IP_tf.getText());
-                sv.setConsole_username(console_username_tf.getText());
-                sv.setConsole_password(console_password_tf.getText());
+                server.setName(name_tf.getText());
+                server.setUsername(username_tf.getText());
+                server.setPassword(password_tf.getText());
+                server.setIP(IP_tf.getText());
+                server.setConsole_username(console_username_tf.getText());
+                server.setConsole_password(console_password_tf.getText());
+                server.setNote(Note_tf.getText());
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });
@@ -265,8 +253,8 @@ public class Set_server {
 
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
-            Main.user.all_passwords.remove(password);
-            mid_list_items.remove(password);
+            Main.user.all_passwords.remove(server);
+            mid_list_items.remove(server);
             choice_list.setItems(mid_list_items);
         });
 

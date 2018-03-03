@@ -246,28 +246,20 @@ public class Set_Giftcard {
 
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
-                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "奖励信息";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                GiftCard gc = new GiftCard(name_input, Note_input);
-                gc.setIn_date(In_date_tf.getText());
-                gc.setMemberID(memberID_tf.getText());
-                gc.setMemberID_att(memberID_att_tf.getText());
-                gc.setMemberName(memberName_tf.getText());
-                gc.setPhone(Phone_tf.getText());
-                gc.setPIN(PIN_tf.getText());
-                gc.setSite(site_tf.getText());
+                giftCard.setName(name_tf.getText());
+                giftCard.setIn_date(In_date_tf.getText());
+                giftCard.setMemberID(memberID_tf.getText());
+                giftCard.setMemberID_att(memberID_att_tf.getText());
+                giftCard.setMemberName(memberName_tf.getText());
+                giftCard.setPhone(Phone_tf.getText());
+                giftCard.setPIN(PIN_tf.getText());
+                giftCard.setSite(site_tf.getText());
+                giftCard.setNote(Note_tf.getText());
+
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });

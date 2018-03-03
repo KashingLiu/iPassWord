@@ -192,7 +192,6 @@ public class Set_Passport {
         });
     }
     private static void add_list(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Password password) {
-
         mid_list_items.add(password);
         choice_list.setItems(mid_list_items);
     }
@@ -249,28 +248,19 @@ public class Set_Passport {
 
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
-                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "护照信息";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                Passport pp = new Passport(name_input, Note_input);
-                pp.setAddress(address_tf.getText());
-                pp.setAuthority(authority_tf.getText());
-                pp.setBirthday(birthday_tf.getText());
-                pp.setExpiry_date(expiry_date_tf.getText());
-                pp.setFull_name(full_name_tf.getText());
-                pp.setIssued_date(issued_date_tf.getText());
-                pp.setNationality(nationality_tf.getText());
+                passport.setName(name_tf.getText());
+                passport.setNote(Note_tf.getText());
+                passport.setAddress(address_tf.getText());
+                passport.setAuthority(authority_tf.getText());
+                passport.setBirthday(birthday_tf.getText());
+                passport.setExpiry_date(expiry_date_tf.getText());
+                passport.setFull_name(full_name_tf.getText());
+                passport.setIssued_date(issued_date_tf.getText());
+                passport.setNationality(nationality_tf.getText());
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });

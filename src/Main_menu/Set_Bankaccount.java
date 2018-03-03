@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 public class Set_Bankaccount {
     private static TextField name_tf = new TextField();
     private static TextField account_tf = new TextField();
-    private static MenuButton type_mb = new MenuButton();
+
     private static TextField alias_tf = new TextField();
     private static TextField account_number_tf = new TextField();
     private static TextField PIN_tf = new TextField();
@@ -34,8 +34,33 @@ public class Set_Bankaccount {
     private static Label Note = new Label("备注");
     private static Label title = new Label("银行账户");
     private static TextArea Note_tf = new TextArea();
+    private static MenuItem mi1 = new MenuItem("ATM");
+    private static MenuItem mi2 = new MenuItem("储蓄账户");
+    private static MenuItem mi3 = new MenuItem("支票");
+    private static MenuItem mi4 = new MenuItem("债券");
+    private static MenuItem mi5 = new MenuItem("生活缴费");
+    private static MenuItem mi6 = new MenuItem("其他");
+    private static MenuButton type_mb = new MenuButton("类型",null,mi1,mi2,mi3,mi4,mi5,mi6);
 
     private static void pre_set_bankaccount() {
+        mi1.setOnAction((ActionEvent ae1)->{
+            type_mb.setText(mi1.getText());
+        });
+        mi2.setOnAction((ActionEvent ae2)->{
+            type_mb.setText(mi2.getText());
+        });
+        mi3.setOnAction((ActionEvent ae3)->{
+            type_mb.setText(mi3.getText());
+        });
+        mi4.setOnAction((ActionEvent ae4)->{
+            type_mb.setText(mi4.getText());
+        });
+        mi5.setOnAction((ActionEvent ae5)->{
+            type_mb.setText(mi5.getText());
+        });
+        mi6.setOnAction((ActionEvent ae6)->{
+            type_mb.setText(mi6.getText());
+        });
         name_tf.setEditable(true);
         account_tf.setEditable(true);
         alias_tf.setEditable(true);
@@ -81,8 +106,6 @@ public class Set_Bankaccount {
         address.setStyle("-fx-text-fill:#707070");
         Note.setStyle("-fx-text-fill:#707070");
 
-
-
         name.setFont(new Font(15.0));
         account.setFont(new Font(15.0));
         type.setFont(new Font(15.0));
@@ -94,7 +117,6 @@ public class Set_Bankaccount {
         address.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
         title.setFont(new Font(15.0));
-
 
         AnchorPane.setRightAnchor(name,437.0);
         AnchorPane.setRightAnchor(account,437.0);
@@ -238,7 +260,6 @@ public class Set_Bankaccount {
         AnchorPane.setLeftAnchor(type_tf,250.0);
         AnchorPane.setTopAnchor(type_tf,242.0);
 
-
         Button change = new Button("编辑");
         Button delete = new Button("删除");
 
@@ -266,29 +287,21 @@ public class Set_Bankaccount {
 
             //保存按钮
             ok.setOnAction((ActionEvent action2)->{
-                //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
-                String name_input = name_tf.getText();
-                String Note_input = Note_tf.getText();
-                if (name_input.equals("")) {
-                    name_input = "银行账户";
-                }
-                if (Note_input.equals("")) {
-                    Note_input = "";
-                }
-                BankAccount ba = new BankAccount(name_input, Note_input);
-                ba.setAccount(account_tf.getText());
-                ba.setAccount_number(account_number_tf.getText());
-                ba.setAddress(address_tf.getText());
-                ba.setAlias(alias_tf.getText());
-                ba.setPhone(Phone_tf.getText());
-                ba.setPIN(PIN_tf.getText());
-                ba.setSwift(Swift_tf.getText());
-                ba.setType(type_mb.getText());
+                bankAccount.setName(name_tf.getText());
+                bankAccount.setAccount(account_tf.getText());
+                bankAccount.setType(type_mb.getText());
+                bankAccount.setAccount_number(account_number_tf.getText());
+                bankAccount.setAddress(address_tf.getText());
+                bankAccount.setAlias(alias_tf.getText());
+                bankAccount.setPhone(Phone_tf.getText());
+                bankAccount.setPIN(PIN_tf.getText());
+                bankAccount.setSwift(Swift_tf.getText());
+                bankAccount.setNote(Note_tf.getText());
+
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });
@@ -322,5 +335,4 @@ public class Set_Bankaccount {
         AnchorPane.setBottomAnchor(change,5.0);
         AnchorPane.setRightAnchor(change,100.0);
     }
-
 }
