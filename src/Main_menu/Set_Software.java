@@ -260,6 +260,7 @@ public class Set_Software {
             Main.user.all_passwords.remove(software);
             mid_list_items.remove(software);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(software);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

@@ -265,6 +265,7 @@ public class Set_server {
             Main.user.all_passwords.remove(server);
             mid_list_items.remove(server);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(server);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

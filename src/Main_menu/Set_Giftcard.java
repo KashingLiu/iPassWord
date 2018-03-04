@@ -292,6 +292,7 @@ public class Set_Giftcard {
             Main.user.all_passwords.remove(giftCard);
             mid_list_items.remove(giftCard);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(giftCard);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

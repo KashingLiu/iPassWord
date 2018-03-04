@@ -284,6 +284,7 @@ public class Set_Membership {
             Main.user.all_passwords.remove(membership);
             mid_list_items.remove(membership);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(membership);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

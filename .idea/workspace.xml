@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Datte.java" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="~">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/zxcvbn_1_2_4_javadoc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Main_menu/GlobalMenu.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Util/Check_Password_Strength.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/JavaFxApplication.iml" afterPath="$PROJECT_DIR$/JavaFxApplication.iml" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Main_menu.fxml" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Main_menu.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Controller.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/first_set.fxml" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/first_set.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/Datte.java" afterPath="$PROJECT_DIR$/src/Datte.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Controller.java" afterPath="$PROJECT_DIR$/src/Main_menu/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" afterPath="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Database.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" />
@@ -13,7 +24,12 @@
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_Software.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
       <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_server.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_server.java" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Password.java" afterPath="$PROJECT_DIR$/src/Util/Password.java" />
+      <change beforePath="$PROJECT_DIR$/src/Util/AesEncodeUtil.java" afterPath="$PROJECT_DIR$/src/Util/AesEncodeUtil.java" />
+      <change beforePath="$PROJECT_DIR$/src/first_set/Controller.java" afterPath="$PROJECT_DIR$/src/first_set/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/first_set/Main.java" afterPath="$PROJECT_DIR$/src/first_set/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/first_set/first_set.fxml" afterPath="$PROJECT_DIR$/src/first_set/first_set.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/verify/Controller.java" afterPath="$PROJECT_DIR$/src/verify/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/verify/verify.fxml" afterPath="$PROJECT_DIR$/src/verify/verify.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,45 +87,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Set_Bankaccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
+      <file leaf-file-name="Datte.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Datte.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="247" column="53" lean-forward="true" selection-start-line="247" selection-start-column="53" selection-end-line="247" selection-end-column="53" />
+            <state relative-caret-position="102">
+              <caret line="12" column="50" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set_Software.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Software.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="210" column="68" lean-forward="false" selection-start-line="210" selection-start-column="68" selection-end-line="210" selection-end-column="68" />
-              <folding>
-                <element signature="e#9525#9768#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Set_server.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="157" column="17" lean-forward="false" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+            <state relative-caret-position="-116">
+              <caret line="318" column="4" lean-forward="false" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#partition_title#0;class#Controller#0" expanded="false" />
+                <element signature="method#partition_type#0;class#Controller#0" expanded="false" />
+                <element signature="method#partition_date#0;class#Controller#0" expanded="false" />
+                <element signature="method#sort#0;class#Controller#0" expanded="false" />
+                <element signature="e#5680#6045#0" expanded="false" />
+                <element signature="e#6072#6437#0" expanded="false" />
+                <element signature="e#6464#6538#0" expanded="false" />
+                <element signature="e#6565#6639#0" expanded="false" />
+                <element signature="class#6876:7570" expanded="false" />
+                <element signature="class#7807:11093" expanded="false" />
+                <element signature="e#11206#14178#0" expanded="false" />
+                <element signature="method#press_button#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set_WiFi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
+      <file leaf-file-name="Main_menu.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main_menu/Main_menu.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="252" column="55" lean-forward="false" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
+            <state relative-caret-position="226">
+              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -136,6 +165,8 @@
       <find>clear</find>
       <find>mb</find>
       <find>_mb</find>
+      <find>static</find>
+      <find>Button</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -154,8 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Users.java" />
-        <option value="$PROJECT_DIR$/src/sample/a.java" />
         <option value="$PROJECT_DIR$/src/sample/AesEncodeUtil.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/verify.fxml" />
@@ -164,22 +193,15 @@
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/AesEncodeUtil.java" />
         <option value="$PROJECT_DIR$/src/verify/Users.java" />
-        <option value="$PROJECT_DIR$/src/verify/verify.fxml" />
         <option value="$PROJECT_DIR$/src/verify/Main.java" />
-        <option value="$PROJECT_DIR$/src/Util/AesEncodeUtil.java" />
         <option value="$PROJECT_DIR$/src/Util/verify_password.java" />
         <option value="$PROJECT_DIR$/src/Util/MyController.java" />
-        <option value="$PROJECT_DIR$/src/verify/Controller.java" />
         <option value="$PROJECT_DIR$/src/first_set/processing.fxml" />
-        <option value="$PROJECT_DIR$/src/first_set/first_set.fxml" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" />
         <option value="$PROJECT_DIR$/src/Main_menu/Left_Up_ListCell.java" />
         <option value="$PROJECT_DIR$/src/ListViewWithImages.java" />
         <option value="$PROJECT_DIR$/src/Util/content.txt" />
-        <option value="$PROJECT_DIR$/src/first_set/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/main_menu.css" />
         <option value="$PROJECT_DIR$/src/Util/Users.java" />
-        <option value="$PROJECT_DIR$/src/first_set/Main.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_all.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Main.java" />
         <option value="$PROJECT_DIR$/src/Util/Database.java" />
@@ -191,20 +213,29 @@
         <option value="$PROJECT_DIR$/src/Util/Software.java" />
         <option value="$PROJECT_DIR$/src/Util/Passport.java" />
         <option value="$PROJECT_DIR$/src/Util/WirelessRouter.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Controller.java" />
         <option value="$PROJECT_DIR$/src/Util/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Datte.java" />
-        <option value="$PROJECT_DIR$/src/Datte.java" />
         <option value="$PROJECT_DIR$/src/Util/Password.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/GlobalMenu.java" />
+        <option value="$PROJECT_DIR$/src/first_set/first_set.fxml" />
+        <option value="$PROJECT_DIR$/src/Util/Check_Password_Strength.java" />
+        <option value="$PROJECT_DIR$/src/Util/AesEncodeUtil.java" />
+        <option value="$PROJECT_DIR$/src/Datte.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Database.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Login.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_server.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_Software.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
+        <option value="$PROJECT_DIR$/src/verify/verify.fxml" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Main_menu.fxml" />
+        <option value="$PROJECT_DIR$/src/verify/Controller.java" />
+        <option value="$PROJECT_DIR$/src/first_set/Controller.java" />
+        <option value="$PROJECT_DIR$/src/first_set/Main.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Controller.java" />
       </list>
     </option>
   </component>
@@ -216,7 +247,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="314" />
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1276" />
     <option name="height" value="777" />
@@ -259,7 +290,29 @@
               <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
               <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="first_set" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Main_menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="verify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -281,8 +334,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -331,6 +384,25 @@
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaFxApplication" />
+      <envs />
+    </configuration>
+    <configuration name="Check_Password_Strength" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Util.Check_Password_Strength" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -422,6 +494,11 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="zxcvbn-1.2.4.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/src/Util/zxcvbn-1.2.4.jar" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -474,17 +551,21 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.AesEncodeUtil" />
       <item index="2" class="java.lang.String" itemvalue="Application.ListViewWithImages" />
       <item index="3" class="java.lang.String" itemvalue="Application.Datte" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Check_Password_Strength" />
+      <item index="5" class="java.lang.String" itemvalue="JAR Application.zxcvbn-1.2.4.jar" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Datte" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ListViewWithImages" />
-        <item index="2" class="java.lang.String" itemvalue="Application.AesEncodeUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Check_Password_Strength" />
+        <item index="2" class="java.lang.String" itemvalue="JAR Application.zxcvbn-1.2.4.jar" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ListViewWithImages" />
+        <item index="4" class="java.lang.String" itemvalue="Application.AesEncodeUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -507,7 +588,7 @@
       <workItem from="1519527783609" duration="78000" />
       <workItem from="1519528139906" duration="9134000" />
       <workItem from="1519628252589" duration="23810000" />
-      <workItem from="1519716108260" duration="94305000" />
+      <workItem from="1519716108260" duration="122804000" />
     </task>
     <task id="LOCAL-00001" summary="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来">
       <created>1519869271520</created>
@@ -551,11 +632,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520062274623</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="~">
+      <created>1520064721392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520064721392</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129943000" />
+    <option name="totallyTimeSpent" value="158442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="6" />
@@ -611,7 +699,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -620,79 +708,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/verify.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/verify/verify.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/Util/MyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/verify.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="118" lean-forward="false" selection-start-line="11" selection-start-column="118" selection-end-line="11" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListViewWithImages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -725,28 +740,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Main_menu.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/first_set/first_set.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ListCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -772,14 +765,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/first_set/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Users.java">
@@ -830,14 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1126,40 +1103,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
+    <entry file="jar://$PROJECT_DIR$/src/Util/zxcvbn-1.2.4-sources.jar!/com/nulabinc/zxcvbn/matchers/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/Util/zxcvbn-1.2.4.jar!/com/nulabinc/zxcvbn/messages_nl.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/Util/zxcvbn-1.2.4-sources.jar!/com/nulabinc/zxcvbn/Feedback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="42" column="80" lean-forward="false" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util/Check_Password_Strength.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="75" column="72" lean-forward="true" selection-start-line="75" selection-start-column="72" selection-end-line="75" selection-end-column="72" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#GlobalMenu#0" expanded="false" />
-            <element signature="method#GlobalMenu#0;class#GlobalMenu#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#Check_Password_Strength#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#Check_Uppercase#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#Check_Lowercase#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#Check_Number#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#LowestStandard#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#Onlycase#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#Onlynum#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#dup_Upper#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#dup_Lower#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="method#dup_Num#0;class#Check_Password_Strength#0" expanded="false" />
+            <element signature="e#5621#5622#0" expanded="false" />
+            <element signature="e#5661#5662#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/AesEncodeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-708">
-          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="221">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/Util/zxcvbn-1.2.4.jar!/com/nulabinc/zxcvbn/messages.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Datte.java">
+    <entry file="jar://$PROJECT_DIR$/src/Util/zxcvbn-1.2.4.jar!/com/nulabinc/zxcvbn/messages_ja.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="7" selection-end-column="36" />
+        <state relative-caret-position="34">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/first_set/first_set.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="322" column="38" lean-forward="false" selection-start-line="322" selection-start-column="38" selection-end-line="322" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#pre_set_Database#0;class#Set_Database#0" expanded="false" />
+            <element signature="method#set_Database#0;class#Set_Database#0" expanded="false" />
+            <element signature="e#11906#12149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="341" column="43" lean-forward="false" selection-start-line="341" selection-start-column="12" selection-end-line="341" selection-end-column="43" />
+          <folding>
+            <element signature="method#pre_set_bankaccount#0;class#Set_Bankaccount#0" expanded="false" />
+            <element signature="method#set_bankaccount#0;class#Set_Bankaccount#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/Password.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="110">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#650#651#0" expanded="true" />
@@ -1182,89 +1244,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="261" column="68" lean-forward="false" selection-start-line="261" selection-start-column="68" selection-end-line="261" selection-end-column="68" />
-          <folding>
-            <element signature="e#11800#12043#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="238" column="68" lean-forward="false" selection-start-line="238" selection-start-column="68" selection-end-line="238" selection-end-column="68" />
-          <folding>
-            <element signature="e#11002#11245#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="183" column="68" lean-forward="false" selection-start-line="183" selection-start-column="68" selection-end-line="183" selection-end-column="68" />
-          <folding>
-            <element signature="e#7989#8232#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Membership.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="231" column="68" lean-forward="false" selection-start-line="231" selection-start-column="68" selection-end-line="231" selection-end-column="68" />
+        <state relative-caret-position="258">
+          <caret line="286" column="40" lean-forward="false" selection-start-line="286" selection-start-column="40" selection-end-line="286" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#10349#10592#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="267" column="36" lean-forward="false" selection-start-line="267" selection-start-column="36" selection-end-line="267" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Passport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="240" column="68" lean-forward="false" selection-start-line="240" selection-start-column="68" selection-end-line="240" selection-end-column="68" />
+        <state relative-caret-position="241">
+          <caret line="296" column="38" lean-forward="false" selection-start-line="296" selection-start-column="38" selection-end-line="296" selection-end-column="38" />
           <folding>
             <element signature="e#11388#11631#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="230" column="35" lean-forward="false" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+          <folding>
+            <element signature="e#7989#8232#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Giftcard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="294" column="38" lean-forward="false" selection-start-line="294" selection-start-column="38" selection-end-line="294" selection-end-column="38" />
+          <folding>
+            <element signature="e#11002#11245#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Software.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="210" column="68" lean-forward="false" selection-start-line="210" selection-start-column="68" selection-end-line="210" selection-end-column="68" />
+        <state relative-caret-position="258">
+          <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
           <folding>
             <element signature="e#9525#9768#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Datte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/verify/verify.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="252" column="55" lean-forward="false" selection-start-line="252" selection-start-column="55" selection-end-line="252" selection-end-column="55" />
+        <state relative-caret-position="601">
+          <caret line="312" column="38" lean-forward="false" selection-start-line="312" selection-start-column="38" selection-end-line="312" selection-end-column="38" />
+          <folding>
+            <element signature="method#pre_set_WiFi#0;class#Set_WiFi#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/GlobalMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="83" column="1" lean-forward="false" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <folding>
+            <element signature="method#GlobalMenu#0;class#GlobalMenu#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_Bankaccount.java">
+    <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="247" column="53" lean-forward="true" selection-start-line="247" selection-start-column="53" selection-end-line="247" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="157" column="17" lean-forward="false" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+        <state relative-caret-position="-517">
+          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/first_set/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Main_menu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="318" column="4" lean-forward="false" selection-start-line="318" selection-start-column="4" selection-end-line="318" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#partition_title#0;class#Controller#0" expanded="false" />
+            <element signature="method#partition_type#0;class#Controller#0" expanded="false" />
+            <element signature="method#partition_date#0;class#Controller#0" expanded="false" />
+            <element signature="method#sort#0;class#Controller#0" expanded="false" />
+            <element signature="e#5680#6045#0" expanded="false" />
+            <element signature="e#6072#6437#0" expanded="false" />
+            <element signature="e#6464#6538#0" expanded="false" />
+            <element signature="e#6565#6639#0" expanded="false" />
+            <element signature="class#6876:7570" expanded="false" />
+            <element signature="class#7807:11093" expanded="false" />
+            <element signature="e#11206#14178#0" expanded="false" />
+            <element signature="method#press_button#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1334,6 +1467,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>zxcvbn-1.2.4-javadoc</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

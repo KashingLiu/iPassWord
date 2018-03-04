@@ -294,6 +294,7 @@ public class Set_Passport {
             Main.user.all_passwords.remove(passport);
             mid_list_items.remove(passport);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(passport);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

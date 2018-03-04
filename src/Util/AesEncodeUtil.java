@@ -17,7 +17,7 @@ public class AesEncodeUtil {
 
     //私钥
     private static final String ASE_KEY="@AES%16#JFX&225!";   //AES固定格式为128/192/256 bits.即：16/24/32bytes。DES固定格式为128bits，即8bytes。
-
+    
     /**
      * 加密
      *

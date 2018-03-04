@@ -3,11 +3,14 @@ package Main_menu;
 import Util.Password;
 import Util.WirelessRouter;
 import first_set.Main;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
+
+import java.util.ArrayList;
 
 public class Set_WiFi {
     private static Label WiFi_title = new Label("无线路由器");
@@ -285,7 +288,6 @@ public class Set_WiFi {
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
                 mid_list_items.removeAll(Main.user.all_passwords);
-                mid_list_items.clear();
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });
@@ -308,6 +310,7 @@ public class Set_WiFi {
             Main.user.all_passwords.remove(password);
             mid_list_items.remove(password);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(password);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

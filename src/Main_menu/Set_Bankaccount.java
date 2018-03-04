@@ -339,6 +339,7 @@ public class Set_Bankaccount {
             Main.user.all_passwords.remove(bankAccount);
             mid_list_items.remove(bankAccount);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(bankAccount);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

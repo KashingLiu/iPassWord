@@ -228,6 +228,7 @@ public class Set_Login {
             Main.user.all_passwords.remove(login);
             mid_list_items.remove(login);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(login);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);

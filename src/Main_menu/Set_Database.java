@@ -5,7 +5,10 @@ import Util.Password;
 import first_set.Main;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
@@ -250,6 +253,7 @@ public class Set_Database {
         AnchorPane.setLeftAnchor(type_tf,250.0);
         AnchorPane.setTopAnchor(type_tf,242.0);
 
+
         Button change = new Button("编辑");
         Button delete = new Button("删除");
 
@@ -316,6 +320,7 @@ public class Set_Database {
             Main.user.all_passwords.remove(database);
             mid_list_items.remove(database);
             choice_list.setItems(mid_list_items);
+            Main.back_up.push(database);
         });
 
         AnchorPane.setBottomAnchor(delete,5.0);
