@@ -22,8 +22,5 @@ public class Users {
         all_passwords.add(password);
     }
 
-    public void del_password(Password password) {
-        all_passwords.remove(password);
-    }
 }
 

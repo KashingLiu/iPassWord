@@ -67,16 +67,29 @@ public class AesEncodeUtil {
         }
     }
 
-    /**
-     * 测试
-     *
-     * @param args
-     * @throws Exception
-     */
+    public static String str2HexStr(String str) {
+
+        char[] chars = "0123456789ABCDEF".toCharArray();
+        StringBuilder sb = new StringBuilder("");
+        byte[] bs = str.getBytes();
+        int bit;
+        for (int i = 0; i < bs.length; i++) {
+            bit = (bs[i] & 0xf0) >> 4;
+            sb.append(chars[bit]);
+            bit = bs[i] & 0x0f;
+            sb.append(chars[bit]);
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) throws Exception {
-        verify_password a = new verify_password();
-        int out = a.verify("1Kashingliu");
-        System.out.println(out);
+        String key = "aashingliu";
+        System.out.println(str2HexStr(key));
+
+
+//        verify_password a = new verify_password();
+//        int out = a.verify("1Kashingliu");
+//        System.out.println(out);
 
 //        String content = "kashingliu";
 //        // 加密

@@ -121,7 +121,6 @@ public class Set_Bankaccount {
         Phone.setFont(new Font(15.0));
         address.setFont(new Font(15.0));
         Note.setFont(new Font(15.0));
-        title.setFont(new Font(15.0));
         set_Date_la.setFont(new Font(15.0));
         set_Date_con.setFont(new Font(15.0));
 
@@ -245,7 +244,7 @@ public class Set_Bankaccount {
     public static void display_bankaccount(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, BankAccount bankAccount) {
         pre_set_bankaccount();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
+        main_page.getChildren().addAll(set_Date_con,type_tf,set_Date_la,name_tf,account_tf,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
         name_tf.setEditable(false);
         account_tf.setEditable(false);
         type_tf.setEditable(false);
@@ -314,6 +313,7 @@ public class Set_Bankaccount {
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
+                mid_list_items.removeAll(Main.user.all_passwords);
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });

@@ -7,7 +7,6 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Side;
@@ -38,7 +37,6 @@ public class Controller {
     public AnchorPane bottom_page;          //+号所在的，下方的面板
     public ListView<Password> choice_list;  //中间的信息列表
     public MenuButton sort_button;          //排序的按钮
-
 
     private final Image login_lock  = new Image("./Util/icon/lock_login.png");  //所有项目的图标
     private Image[] left_list_Image = {login_lock/*,two,three*/};                   //图标构成的数组
@@ -275,10 +273,12 @@ public class Controller {
             if (newValue!=null && Main.user.all_passwords.get(newValue.intValue()).tag.equals("WiFi")) {
                 Set_WiFi.display_WiFi(choice_list,mid_list_items,add_button,main_page,bottom_page,(WirelessRouter)Main.user.all_passwords.get(newValue.intValue()));
             } else if (newValue!=null && Main.user.all_passwords.get(newValue.intValue()).tag.equals("main")) {
-
+//                bottom_page.getChildren().clear();
                 main_page.getChildren().clear();
-                bottom_page.getChildren().removeAll();
-                System.out.println("main");
+//                Set_Main.display_main(choice_list,mid_list_items,add_button,main_page,bottom_page,Main.user.all_passwords.get(newValue.intValue()));
+
+
+//                System.out.println("main");
 
             } else if (newValue!=null && Main.user.all_passwords.get(newValue.intValue()).tag.equals("Database")) {
                 Set_Database.display_Database(choice_list,mid_list_items,add_button,main_page,bottom_page,(Database)Main.user.all_passwords.get(newValue.intValue()));

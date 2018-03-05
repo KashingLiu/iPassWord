@@ -269,6 +269,7 @@ public class Set_Passport {
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
+                mid_list_items.removeAll(Main.user.all_passwords);
                 mid_list_items.addAll(Main.user.all_passwords);
                 choice_list.setItems(mid_list_items);
             });
