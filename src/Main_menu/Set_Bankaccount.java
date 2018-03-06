@@ -9,6 +9,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 public class Set_Bankaccount {
     private static TextField name_tf = new TextField();
     private static TextField account_tf = new TextField();
@@ -226,6 +229,7 @@ public class Set_Bankaccount {
                 ba.setType(type_mb.getText());
                 set_Date_con.setText(ba.getSetUpDate());
                 Main.user.add_password(ba);
+                Main.save();
                 add_list(choice_list,mid_list_items,ba);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -244,6 +248,7 @@ public class Set_Bankaccount {
     public static void display_bankaccount(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, BankAccount bankAccount) {
         pre_set_bankaccount();
         main_page.getChildren().clear();
+        set_Date_con.setText(bankAccount.getSetUpDate());
         main_page.getChildren().addAll(set_Date_con,type_tf,set_Date_la,name_tf,account_tf,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
         name_tf.setEditable(false);
         account_tf.setEditable(false);
@@ -308,7 +313,9 @@ public class Set_Bankaccount {
                 bankAccount.setPIN(PIN_tf.getText());
                 bankAccount.setSwift(Swift_tf.getText());
                 bankAccount.setNote(Note_tf.getText());
-
+                Main.user.all_passwords.remove(bankAccount);
+                Main.user.all_passwords.add(bankAccount);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -337,6 +344,7 @@ public class Set_Bankaccount {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(bankAccount);
+            Main.save();
             mid_list_items.remove(bankAccount);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(bankAccount);

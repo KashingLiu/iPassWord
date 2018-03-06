@@ -1,9 +1,10 @@
 package Util;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Password {
+public class Password implements Serializable{
     private Date date = new Date();
     public String name;
     public String Note;                    //备注

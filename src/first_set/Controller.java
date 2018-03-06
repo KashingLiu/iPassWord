@@ -1,6 +1,7 @@
 package first_set;
 //这是进入软件的第一个页面，里面涉及到了用户主密码的设置与检测、跳转到使用界面
 
+import Util.AesCtr;
 import com.nulabinc.zxcvbn.Feedback;
 import com.nulabinc.zxcvbn.Strength;
 import com.nulabinc.zxcvbn.Zxcvbn;
@@ -19,7 +20,9 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -72,17 +75,27 @@ public class Controller {
 
     //当按钮按下时切换界面，原来的界面消失
     public void ButtonPressed(ActionEvent evt) throws Exception {
-        Main.user.setMain_password(main_password.getText());
+        Main.user.setMain_password(AesCtr.encrypt(main_password.getText()));
+        FileOutputStream fileOut = new FileOutputStream("user.ser");
+        ObjectOutputStream out = new ObjectOutputStream(fileOut);
+        out.writeObject(Main.user);
+        out.close();
+        fileOut.close();
         Platform.runLater(() -> {
             try {
                 ObservableList<Stage> stage = FXRobotHelper.getStages();
-                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../Main_menu/Main_menu.fxml")));
+                Scene scene = new Scene(FXMLLoader.load(getClass().getClassLoader().getResource("Main_menu/Main_menu.fxml")));
                 stage.get(0).setScene(scene);
+                stage.get(0).setOnCloseRequest((event -> {
+                    System.out.println("close");
+                }));
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
         });
     }
+
+
 }
 
 //如果空or非空的话就显示or不显示

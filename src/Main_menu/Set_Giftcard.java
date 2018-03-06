@@ -187,6 +187,7 @@ public class Set_Giftcard {
                 gc.setSite(site_tf.getText());
                 set_Date_con.setText(gc.getSetUpDate());
                 Main.user.add_password(gc);
+                Main.save();
                 add_list(choice_list,mid_list_items,gc);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -205,6 +206,7 @@ public class Set_Giftcard {
     public static void display_giftcard(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, GiftCard giftCard) {
         pre_set_giftcard();
         main_page.getChildren().clear();
+        set_Date_con.setText(giftCard.getSetUpDate());
         main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,memberName,memberID,PIN,memberID_att,In_date,Phone,site,memberName_tf,memberID_tf,PIN_tf,memberID_att_tf,In_date_tf,Phone_tf,site_tf,Note_tf,name,Note,title);
         name_tf.setEditable(false);
         memberName_tf.setEditable(false);
@@ -263,7 +265,9 @@ public class Set_Giftcard {
                 giftCard.setPIN(PIN_tf.getText());
                 giftCard.setSite(site_tf.getText());
                 giftCard.setNote(Note_tf.getText());
-
+                Main.user.all_passwords.remove(giftCard);
+                Main.user.all_passwords.add(giftCard);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -291,6 +295,7 @@ public class Set_Giftcard {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(giftCard);
+            Main.save();
             mid_list_items.remove(giftCard);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(giftCard);

@@ -1,5 +1,6 @@
 package Main_menu;
 
+import Util.AesCtr;
 import Util.Database;
 import Util.Password;
 import first_set.Main;
@@ -7,10 +8,17 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class Set_Database {
     private static TextField name_tf = new TextField();
@@ -44,6 +52,9 @@ public class Set_Database {
     private static Label set_Date_la = new Label("创建日期");
     private static Label set_Date_con = new Label();
 
+    private static Image see_1 = new Image("Util/icon/see_before.png");
+    private static Image see_2 = new Image("Util/icon/see_after.png");
+    private static Image clip = new Image("Util/icon/clip.png");
 
     private static void pre_set_Database() {
         mi1.setOnAction((ActionEvent ae1)->{
@@ -135,6 +146,7 @@ public class Set_Database {
         AnchorPane.setTopAnchor(port,246.0);
         AnchorPane.setTopAnchor(username,273.0);
         AnchorPane.setTopAnchor(password,302.0);
+
         AnchorPane.setTopAnchor(connection_options,330.0);
         AnchorPane.setTopAnchor(Note,358.0);
         AnchorPane.setTopAnchor(set_Date_la,524.0);
@@ -204,13 +216,14 @@ public class Set_Database {
                 }
                 Util.Database db = new Util.Database(name_input, Note_input);
                 db.setConnection_options(connection_options_tf.getText());
-                db.setPassword(password_tf.getText());
+                db.setPassword(AesCtr.encrypt(password_tf.getText()));
                 db.setPort(port_tf.getText());
                 db.setServer(server_tf.getText());
                 db.setType(type_mb.getText());
                 db.setUsername(username_tf.getText());
                 set_Date_con.setText(db.getSetUpDate());
                 Main.user.add_password(db);
+                Main.save();
                 add_list(choice_list,mid_list_items,db);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -230,8 +243,36 @@ public class Set_Database {
 
     public static void display_Database(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Database database) {
         pre_set_Database();
+        ImageView imageView = new ImageView();
+        ImageView clipboard = new ImageView(clip);
+        imageView.setImage(see_1);
+        imageView.setFitWidth(16);
+        imageView.setFitHeight(16);
+        imageView.hoverProperty().addListener((observable -> {
+            if (imageView.isHover()) {
+                password_tf.setText(AesCtr.decrypt(database.getPassword()));
+                imageView.setImage(see_2);
+            } else {
+                password_tf.setText("********");
+                imageView.setImage(see_1);
+            }
+        }));
+
+        clipboard.setFitHeight(16);
+        clipboard.setFitWidth(16);
+        clipboard.setOnMouseClicked((event -> {
+            Clipboard clipboard1 = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.putString(AesCtr.decrypt(database.getPassword()));
+            clipboard1.setContent(cc);
+        }));
+        AnchorPane.setTopAnchor(imageView,302.0);
+        AnchorPane.setLeftAnchor(imageView,500.0);
+        AnchorPane.setTopAnchor(clipboard,302.0);
+        AnchorPane.setLeftAnchor(clipboard,520.0);
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(set_Date_con,set_Date_la,type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
+        set_Date_con.setText(database.getSetUpDate());
+        main_page.getChildren().addAll(clipboard,imageView,set_Date_con,set_Date_la,type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
         name_tf.setEditable(false);
         server_tf.setEditable(false);
         port_tf.setEditable(false);
@@ -283,7 +324,7 @@ public class Set_Database {
             ok.setOnAction((ActionEvent action2)->{
                 database.setName(name_tf.getText());
                 database.setConnection_options(connection_options_tf.getText());
-                database.setPassword(password_tf.getText());
+                database.setPassword(AesCtr.encrypt(password_tf.getText()));
                 database.setPort(port_tf.getText());
                 database.setServer(server_tf.getText());
                 database.setType(type_mb.getText());
@@ -293,8 +334,11 @@ public class Set_Database {
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
-                mid_list_items.removeAll(Main.user.all_passwords);
-                mid_list_items.addAll(Main.user.all_passwords);
+                mid_list_items.removeAll(database);
+                Main.user.all_passwords.remove(database);
+                Main.user.all_passwords.add(database);
+                Main.save();
+                mid_list_items.addAll(database);
                 choice_list.setItems(mid_list_items);
             });
             bottom_page.getChildren().addAll(cancel,ok);
@@ -305,7 +349,7 @@ public class Set_Database {
             server_tf.setText(database.getServer());
             port_tf.setText(database.getPort());
             username_tf.setText(database.getUsername());
-            password_tf.setText(database.getPassword());
+            password_tf.setText(AesCtr.decrypt(database.getPassword()));
             connection_options_tf.setText(database.getConnection_options());
             Note_tf.setText(database.getNote());
             type_tf.setText(database.getType());
@@ -319,6 +363,7 @@ public class Set_Database {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(database);
+            Main.save();
             mid_list_items.remove(database);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(database);

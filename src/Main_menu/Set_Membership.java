@@ -179,6 +179,7 @@ public class Set_Membership {
                 ms.setUsername(username_tf.getText());
                 set_Date_con.setText(ms.getSetUpDate());
                 Main.user.add_password(ms);
+                Main.save();
                 add_list(choice_list,mid_list_items,ms);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -197,6 +198,7 @@ public class Set_Membership {
     public static void display_membership(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Membership membership) {
         pre_set_membership();
         main_page.getChildren().clear();
+        set_Date_con.setText(membership.getSetUpDate());
         main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,site_tf,PIN_tf,Phone_tf,
                 username_tf,joinDate_tf,expiryDate_tf,name,site,Phone,
                 username,joinDate,expiryDate,PIN,Note,title,Note_tf);
@@ -257,6 +259,9 @@ public class Set_Membership {
                 membership.setSite(site_tf.getText());
                 membership.setUsername(username_tf.getText());
                 membership.setNote(Note_tf.getText());
+                Main.user.all_passwords.remove(membership);
+                Main.user.all_passwords.add(membership);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -283,6 +288,7 @@ public class Set_Membership {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(membership);
+            Main.save();
             mid_list_items.remove(membership);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(membership);

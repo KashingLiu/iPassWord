@@ -15,9 +15,9 @@
       <Separator layoutX="247.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="6.0" />
       <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="724.0" prefWidth="249.0">
          <children>
-            <ListView fx:id="list_view" focusTraversable="false" layoutY="53.0" prefHeight="51.0" prefWidth="249.0" style="-fx-background-insets: 0; -fx-background-color: -fx-background;" />
-            <Button fx:id="backup" onAction="#press_back_up" layoutX="17.0" layoutY="683.0" mnemonicParsing="false" text="撤回" />
-            <Button fx:id="lock" onAction="#press_lock" layoutX="74.0" layoutY="683.0" mnemonicParsing="false" text="锁定" />
+            <ListView fx:id="list_view" layoutY="67.0" prefHeight="165.0" prefWidth="249.0" style="-fx-background-insets: 0;" />
+            <Button fx:id="backup" layoutX="17.0" layoutY="683.0" mnemonicParsing="false" onAction="#press_back_up" text="撤回" />
+            <Button fx:id="lock" layoutX="74.0" layoutY="683.0" mnemonicParsing="false" onAction="#press_lock" text="锁定" />
          </children>
       </AnchorPane>
       <Separator layoutX="519.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="12.0" />

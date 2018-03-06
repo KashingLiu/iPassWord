@@ -1,21 +1,26 @@
 package Main_menu;
 
+import Util.AesCtr;
 import Util.Password;
 import Util.Server;
 import first_set.Main;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
 public class Set_server {
     private static TextField name_tf = new TextField();
     private static TextField username_tf = new TextField();
-    private static PasswordField password_tf = new PasswordField();
+    private static TextField password_tf = new TextField();
     private static TextField IP_tf = new TextField();
     private static TextField console_username_tf = new TextField();
-    private static PasswordField console_password_tf = new PasswordField();
+    private static TextField console_password_tf = new TextField();
 
     private static Label name = new Label("全名");
     private static Label username = new Label("用户名");
@@ -29,6 +34,11 @@ public class Set_server {
     private static TextArea Note_tf = new TextArea();
     private static Label set_Date_la = new Label("创建日期");
     private static Label set_Date_con = new Label();
+
+    private static Image see_1 = new Image("Util/icon/see_before.png");
+    private static Image see_2 = new Image("Util/icon/see_after.png");
+    private static Image clip = new Image("Util/icon/clip.png");
+
 
     private static void pre_set_Server() {
         name_tf.setEditable(true);
@@ -158,12 +168,13 @@ public class Set_server {
                 }
                 Server sv = new Server(name_input, Note_input);
                 sv.setUsername(username_tf.getText());
-                sv.setPassword(password_tf.getText());
+                sv.setPassword(AesCtr.encrypt(password_tf.getText()));
                 sv.setIP(IP_tf.getText());
                 sv.setConsole_username(console_username_tf.getText());
-                sv.setConsole_password(console_password_tf.getText());
+                sv.setConsole_password(AesCtr.encrypt(console_password_tf.getText()));
                 set_Date_con.setText(sv.getSetUpDate());
                 Main.user.add_password(sv);
+                Main.save();
                 add_list(choice_list,mid_list_items,sv);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -180,9 +191,65 @@ public class Set_server {
         choice_list.setItems(mid_list_items);
     }
     public static void display_Server(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Server server) {
-        pre_set_Server();
         main_page.getChildren().clear();
-        main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,Note_tf,name,username_tf,password_tf,IP_tf,
+        pre_set_Server();
+
+        ImageView imageView = new ImageView();
+        ImageView clipboard = new ImageView(clip);
+        imageView.setImage(see_1);
+        imageView.setFitWidth(16);
+        imageView.setFitHeight(16);
+        imageView.hoverProperty().addListener((observable -> {
+            if (imageView.isHover()) {
+                password_tf.setText(AesCtr.decrypt(server.getPassword()));
+                imageView.setImage(see_2);
+            } else {
+                password_tf.setText("********");
+                imageView.setImage(see_1);
+            }
+        }));
+        clipboard.setFitHeight(16);
+        clipboard.setFitWidth(16);
+        clipboard.setOnMouseClicked((event -> {
+            Clipboard clipboard1 = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.putString(AesCtr.decrypt(server.getPassword()));
+            clipboard1.setContent(cc);
+        }));
+        AnchorPane.setTopAnchor(imageView,218.0);
+        AnchorPane.setLeftAnchor(imageView,500.0);
+        AnchorPane.setTopAnchor(clipboard,218.0);
+        AnchorPane.setLeftAnchor(clipboard,520.0);
+
+        ImageView imageView1 = new ImageView();
+        ImageView clipboard1 = new ImageView(clip);
+        imageView1.setImage(see_1);
+        imageView1.setFitWidth(16);
+        imageView1.setFitHeight(16);
+        imageView1.hoverProperty().addListener((observable -> {
+            if (imageView1.isHover()) {
+                console_password_tf.setText(AesCtr.decrypt(server.getConsole_password()));
+                imageView1.setImage(see_2);
+            } else {
+                console_password_tf.setText("********");
+                imageView1.setImage(see_1);
+            }
+        }));
+        clipboard1.setFitHeight(16);
+        clipboard1.setFitWidth(16);
+        clipboard1.setOnMouseClicked((event -> {
+            Clipboard clipboard2 = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.putString(AesCtr.decrypt(server.getConsole_password()));
+            clipboard2.setContent(cc);
+        }));
+        AnchorPane.setTopAnchor(imageView1,301.0);
+        AnchorPane.setLeftAnchor(imageView1,500.0);
+        AnchorPane.setTopAnchor(clipboard1,301.0);
+        AnchorPane.setLeftAnchor(clipboard1,520.0);
+
+        set_Date_con.setText(server.getSetUpDate());
+        main_page.getChildren().addAll(imageView1,clipboard1,imageView,clipboard,set_Date_con,set_Date_la,name_tf,Note_tf,name,username_tf,password_tf,IP_tf,
                 console_username_tf,console_password_tf,username,password,IP,console_username,
                 console_password,Note,title);
         name_tf.setEditable(false);
@@ -234,11 +301,14 @@ public class Set_server {
                 //获取输入内容->构造一个对象->将对象添加至password数组->更新列表(add_list)->其他构件消失
                 server.setName(name_tf.getText());
                 server.setUsername(username_tf.getText());
-                server.setPassword(password_tf.getText());
+                server.setPassword(AesCtr.encrypt(password_tf.getText()));
                 server.setIP(IP_tf.getText());
                 server.setConsole_username(console_username_tf.getText());
-                server.setConsole_password(console_password_tf.getText());
+                server.setConsole_password(AesCtr.encrypt(console_password_tf.getText()));
                 server.setNote(Note_tf.getText());
+                Main.user.all_passwords.remove(server);
+                Main.user.all_passwords.add(server);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -253,10 +323,10 @@ public class Set_server {
 
             name_tf.setText(server.getname());
             username_tf.setText(server.getUsername());
-            password_tf.setText(server.getPassword());
+            password_tf.setText(AesCtr.decrypt(server.getPassword()));
             IP_tf.setText(server.getIP());
             console_username_tf.setText(server.getConsole_username());
-            console_password_tf.setText(server.getConsole_password());
+            console_password_tf.setText(AesCtr.decrypt(server.getConsole_password()));
             Note_tf.setText(server.getNote());
             choice_list.setItems(mid_list_items);
         });
@@ -264,6 +334,7 @@ public class Set_server {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(server);
+            Main.save();
             mid_list_items.remove(server);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(server);

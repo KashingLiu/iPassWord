@@ -188,6 +188,7 @@ public class Set_Passport {
                 pp.setNationality(nationality_tf.getText());
                 set_Date_con.setText(pp.getSetUpDate());
                 Main.user.add_password(pp);
+                Main.save();
                 add_list(choice_list,mid_list_items,pp);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -206,6 +207,7 @@ public class Set_Passport {
     public static void display_passport(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Passport passport) {
         pre_set_passport();
         main_page.getChildren().clear();
+        set_Date_con.setText(passport.getSetUpDate());
         main_page.getChildren().addAll(set_Date_con,set_Date_la,name,name_tf,Note,Note_tf,title,full_name,full_name_tf,nationality,nationality_tf,authority,authority_tf,birthday,birthday_tf,address,address_tf,issued_date,issued_date_tf,expiry_date,expiry_date_tf);
         name_tf.setEditable(false);
         full_name_tf.setEditable(false);
@@ -265,6 +267,9 @@ public class Set_Passport {
                 passport.setFull_name(full_name_tf.getText());
                 passport.setIssued_date(issued_date_tf.getText());
                 passport.setNationality(nationality_tf.getText());
+                Main.user.all_passwords.remove(passport);
+                Main.user.all_passwords.add(passport);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -293,6 +298,7 @@ public class Set_Passport {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(passport);
+            Main.save();
             mid_list_items.remove(passport);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(passport);

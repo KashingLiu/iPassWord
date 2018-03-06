@@ -8,6 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.Stack;
 
 public class Main extends Application {
@@ -16,14 +19,29 @@ public class Main extends Application {
     public static Stack<Password> back_up = new Stack<>();
     @Override
     public void start(Stage primarystage) throws Exception{
-//        if ( File is exist ) { ../verify/verify.fxml } else { first_set.fxml }
-//        如果有了文件，说明用户已经不是第一次使用了，所以直接显示verify那个页面
-        Parent root = FXMLLoader.load(getClass().getResource("../first_set/first_set.fxml"));
-
+        Parent root = new Parent() {};
+//        File file = new File("../first_set/first_set.fxml");
+//        System.out.println(file.exists());
+        try {
+            File file = new File("user.ser");
+            if (!file.exists()) {
+//                System.out.println("no");
+                root = FXMLLoader.load(getClass().getClassLoader().getResource("first_set/first_set.fxml"));
+                System.out.println(root);
+            } else {
+                root = FXMLLoader.load(getClass().getClassLoader().getResource("verify/verify.fxml"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         primarystage.setResizable(false);
         primarystage.setTitle("iPassword");
         primarystage.setScene(new Scene(root));
         primarystage.show();
+        primarystage.setOnCloseRequest((event -> {
+            System.out.println("close0");
+        }));
+
 
     }
 
@@ -31,5 +49,16 @@ public class Main extends Application {
         launch(args);
     }
 
+    public static void save() {
+        try {
+            FileOutputStream fileOut = new FileOutputStream("user.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(Main.user);
+            out.close();
+            fileOut.close();
+        } catch (Exception e) {
+
+        }
+    }
 }
 

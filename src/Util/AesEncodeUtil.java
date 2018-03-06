@@ -10,14 +10,14 @@ import sun.misc.BASE64Encoder;
 public class AesEncodeUtil {
 
     //初始向量
-    public static final String VIPARA = "@AES#&ipassword%";   //AES 为16bytes. DES 为8bytes
+    public static final String VIPARA = "l3n%J4@JuVIse3J^";   //AES 为16bytes. DES 为8bytes
 
     //编码方式
     public static final String bm = "UTF-8";
 
     //私钥
-    private static final String ASE_KEY="@AES%16#JFX&225!";   //AES固定格式为128/192/256 bits.即：16/24/32bytes。DES固定格式为128bits，即8bytes。
-    
+    private static final String ASE_KEY="%x$uY*xg5cU0LWgz";   //AES固定格式为128/192/256 bits.即：16/24/32bytes。DES固定格式为128bits，即8bytes。
+
     /**
      * 加密
      *
@@ -68,7 +68,6 @@ public class AesEncodeUtil {
     }
 
     public static String str2HexStr(String str) {
-
         char[] chars = "0123456789ABCDEF".toCharArray();
         StringBuilder sb = new StringBuilder("");
         byte[] bs = str.getBytes();
@@ -83,23 +82,23 @@ public class AesEncodeUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        String key = "aashingliu";
-        System.out.println(str2HexStr(key));
+//        String key = "aashingliu";
+//        System.out.println(str2HexStr(key));
 
 
 //        verify_password a = new verify_password();
 //        int out = a.verify("1Kashingliu");
 //        System.out.println(out);
 
-//        String content = "kashingliu";
-//        // 加密
-//        System.out.println("加密前：" + content);
-//        String encryptResult = encrypt(content);
-//
-//        System.out.println("加密后：" + encryptResult);
-//        // 解密
-//        String decryptResult = decrypt(encryptResult);
-//        System.out.println("解密后：" + decryptResult);
+        String content = "kashingliu";
+        // 加密
+        System.out.println("加密前：" + content);
+        String encryptResult = encrypt(content);
+
+        System.out.println("加密后：" + encryptResult);
+//         解密
+        String decryptResult = decrypt(encryptResult);
+        System.out.println("解密后：" + decryptResult);
 
     }
 }

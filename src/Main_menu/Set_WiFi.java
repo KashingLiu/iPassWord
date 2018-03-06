@@ -1,5 +1,6 @@
 package Main_menu;
 
+import Util.AesCtr;
 import Util.Password;
 import Util.WirelessRouter;
 import first_set.Main;
@@ -7,6 +8,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
@@ -36,6 +41,11 @@ public class Set_WiFi {
     private static MenuButton WiFi_security_mb = new MenuButton("加密方式",null,mi1,mi2,mi3,mi4,mi5);
     private static Label set_Date_la = new Label("创建日期");
     private static Label set_Date_con = new Label();
+
+    private static Image see_1 = new Image("Util/icon/see_before.png");
+    private static Image see_2 = new Image("Util/icon/see_after.png");
+    private static Image clip = new Image("Util/icon/clip.png");
+
 
     private static void pre_set_WiFi() {
 
@@ -190,13 +200,14 @@ public class Set_WiFi {
                     WiFi_security = "无";
                 }
                 Util.WirelessRouter wr = new Util.WirelessRouter(name_input, Note_input);
-                wr.setPassword(WiFi_Password_tf.getText());
-                wr.setPassword_add(WiFi_Password_add_tf.getText());
+                wr.setPassword(AesCtr.encrypt(WiFi_Password_tf.getText()));
+                wr.setPassword_add(AesCtr.encrypt(WiFi_Password_add_tf.getText()));
                 wr.setSecurity(WiFi_security);
                 wr.setSSID(WiFi_SSID_tf.getText());
                 wr.setServerIP(WiFi_ServerIP_tf.getText());
                 set_Date_con.setText(wr.getSetUpDate());
                 Main.user.add_password(wr);
+                Main.save();
                 add_list(choice_list,mid_list_items,wr);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -217,7 +228,66 @@ public class Set_WiFi {
     public static void display_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, WirelessRouter password) {
         main_page.getChildren().clear();
         pre_set_WiFi();
-        main_page.getChildren().addAll(set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+
+        ImageView imageView1 = new ImageView();
+        ImageView clipboard1 = new ImageView(clip);
+        imageView1.setImage(see_1);
+        imageView1.setFitWidth(16);
+        imageView1.setFitHeight(16);
+        imageView1.hoverProperty().addListener((observable -> {
+            if (imageView1.isHover()) {
+                WiFi_Password_tf.setText(AesCtr.decrypt(password.getPassword()));
+                imageView1.setImage(see_2);
+            } else {
+                WiFi_Password_tf.setText("********");
+                imageView1.setImage(see_1);
+            }
+        }));
+
+        clipboard1.setFitHeight(16);
+        clipboard1.setFitWidth(16);
+        clipboard1.setOnMouseClicked((event -> {
+            Clipboard clipboard2 = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.putString(AesCtr.decrypt(password.getPassword()));
+            clipboard2.setContent(cc);
+        }));
+        AnchorPane.setTopAnchor(imageView1,302.0);
+        AnchorPane.setLeftAnchor(imageView1,500.0);
+        AnchorPane.setTopAnchor(clipboard1,302.0);
+        AnchorPane.setLeftAnchor(clipboard1,520.0);
+
+        ImageView imageView = new ImageView();
+        ImageView clipboard = new ImageView(clip);
+        imageView.setImage(see_1);
+        imageView.setFitWidth(16);
+        imageView.setFitHeight(16);
+        imageView.hoverProperty().addListener((observable -> {
+            if (imageView.isHover()) {
+                WiFi_Password_add_tf.setText(AesCtr.decrypt(password.getPassword_add()));
+                imageView.setImage(see_2);
+            } else {
+                WiFi_Password_add_tf.setText("********");
+                imageView.setImage(see_1);
+            }
+        }));
+
+        clipboard.setFitHeight(16);
+        clipboard.setFitWidth(16);
+        clipboard.setOnMouseClicked((event -> {
+            Clipboard clipboard0 = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.putString(AesCtr.decrypt(password.getPassword_add()));
+            clipboard0.setContent(cc);
+        }));
+        AnchorPane.setTopAnchor(imageView,302.0);
+        AnchorPane.setLeftAnchor(imageView,500.0);
+        AnchorPane.setTopAnchor(clipboard,302.0);
+        AnchorPane.setLeftAnchor(clipboard,520.0);
+
+
+        set_Date_con.setText(password.getSetUpDate());
+        main_page.getChildren().addAll(imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
                 WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
                 WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,
                 WiFi_Password_add_tf,WiFi_Note_tf);
@@ -277,12 +347,14 @@ public class Set_WiFi {
                 }
                 password.setName(WiFi_name_tf.getText());
                 password.setSSID(WiFi_SSID_tf.getText());
-                password.setPassword(WiFi_Password_tf.getText());
+                password.setPassword(AesCtr.encrypt(WiFi_Password_tf.getText()));
                 password.setSecurity(WiFi_security);
                 password.setServerIP(WiFi_ServerIP_tf.getText());
-                password.setPassword_add(WiFi_Password_add_tf.getText());
+                password.setPassword_add(AesCtr.encrypt(WiFi_Password_add_tf.getText()));
                 password.setNote(WiFi_Note_tf.getText());
-
+                Main.user.all_passwords.remove(password);
+                Main.user.all_passwords.add(password);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -297,10 +369,10 @@ public class Set_WiFi {
 
             WiFi_name_tf.setText(password.getName());
             WiFi_SSID_tf.setText(password.getSSID());
-            WiFi_Password_tf.setText(password.getPassword());
+            WiFi_Password_tf.setText(AesCtr.decrypt(password.getPassword()));
             WiFi_security_tf.setText(password.getSecurity());
             WiFi_ServerIP_tf.setText(password.getServerIP());
-            WiFi_Password_add_tf.setText(password.getPassword_add());
+            WiFi_Password_add_tf.setText(AesCtr.decrypt(password.getPassword_add()));
             WiFi_Note_tf.setText(password.getNote());
             choice_list.setItems(mid_list_items);
         });
@@ -308,6 +380,7 @@ public class Set_WiFi {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(password);
+            Main.save();
             mid_list_items.remove(password);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(password);

@@ -21,51 +21,51 @@ class GlobalMenu extends ContextMenu {
         //构造选项菜单，支持图片和文字同时展示
 
         //无线网络
-        ImageView WiFiIcon = new ImageView(new Image("./Util/icon/wifi_mini.png"));
+        ImageView WiFiIcon = new ImageView(new Image("Util/icon/wifi_mini.png"));
         WiFiIcon.setFitWidth(8*2.5);
         WiFiIcon.setFitHeight(7*2.5);
         WiFiMenuItem.setGraphic(WiFiIcon);
 
         //数据库
-        ImageView DBIcon = new ImageView(new Image("./Util/icon/database_mini.png"));
+        ImageView DBIcon = new ImageView(new Image("Util/icon/database_mini.png"));
         DBIcon.setFitWidth(8*2.5);
         DBIcon.setFitHeight(7*2.5);
         DBMenuItem.setGraphic(DBIcon);
 
         //服务器
-        ImageView ServerIcon = new ImageView(new Image("./Util/icon/server_mini.png"));
+        ImageView ServerIcon = new ImageView(new Image("Util/icon/server_mini.png"));
         ServerIcon.setFitWidth(8*2.5);
         ServerIcon.setFitHeight(7*2.5);
         ServerMenuItem.setGraphic(ServerIcon);
 
         //登录信息
-        ImageView LoginIcon = new ImageView(new Image("./Util/icon/login_mini.png"));
+        ImageView LoginIcon = new ImageView(new Image("Util/icon/login_mini.png"));
         LoginIcon.setFitWidth(8*2.5);
         LoginIcon.setFitHeight(7*2.5);
         LoginMenuItem.setGraphic(LoginIcon);
 
         //银行账户信息
-        ImageView BankIcon = new ImageView(new Image("./Util/icon/bankcard_mini.png"));
+        ImageView BankIcon = new ImageView(new Image("Util/icon/bankcard_mini.png"));
         BankIcon.setFitWidth(8*2.5);
         BankIcon.setFitHeight(7*2.5);
         BankMenuItem.setGraphic(BankIcon);
 
-        ImageView AppIcon = new ImageView(new Image("./Util/icon/app_mini.png"));
+        ImageView AppIcon = new ImageView(new Image("Util/icon/app_mini.png"));
         AppIcon.setFitWidth(8*2.5);
         AppIcon.setFitHeight(8*2.5);
         AppMenuItem.setGraphic(AppIcon);
 
-        ImageView PassIcon = new ImageView(new Image("./Util/icon/passport_mini.png"));
+        ImageView PassIcon = new ImageView(new Image("Util/icon/passport_mini.png"));
         PassIcon.setFitWidth(8*2.5);
         PassIcon.setFitHeight(8*2.5);
         PassMenuItem.setGraphic(PassIcon);
 
-        ImageView GiftIcon = new ImageView(new Image("./Util/icon/giftcard_mini.png"));
+        ImageView GiftIcon = new ImageView(new Image("Util/icon/giftcard_mini.png"));
         GiftIcon.setFitWidth(8*2.5);
         GiftIcon.setFitHeight(8*2.5);
         GiftMenuItem.setGraphic(GiftIcon);
 
-        ImageView VipIcon = new ImageView(new Image("./Util/icon/vipcard_mini.png"));
+        ImageView VipIcon = new ImageView(new Image("Util/icon/vipcard_mini.png"));
         VipIcon.setFitWidth(8*2.5);
         VipIcon.setFitHeight(8*2.5);
         VipMenuItem.setGraphic(VipIcon);

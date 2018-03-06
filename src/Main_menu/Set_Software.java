@@ -162,6 +162,7 @@ public class Set_Software {
                 sw.setVersion(version_tf.getText());
                 set_Date_con.setText(sw.getSetUpDate());
                 Main.user.add_password(sw);
+                Main.save();
                 add_list(choice_list,mid_list_items,sw);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -178,8 +179,9 @@ public class Set_Software {
         choice_list.setItems(mid_list_items);
     }
     public static void display_software(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, Software software) {
-        pre_set_software();
         main_page.getChildren().clear();
+        pre_set_software();
+        set_Date_con.setText(software.getSetUpDate());
         main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,version_tf,key_tf,email_tf,buy_date_tf,expiry_date_tf,Note_tf,name,version,key,email,buy_date,expiry_date,Note,title);
         name_tf.setEditable(false);
         version_tf.setEditable(false);
@@ -234,6 +236,9 @@ public class Set_Software {
                 software.setExpiry_date(expiry_date_tf.getText());
                 software.setKey(key_tf.getText());
                 software.setVersion(version_tf.getText());
+                Main.user.all_passwords.remove(software);
+                Main.user.all_passwords.add(software);
+                Main.save();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -259,6 +264,7 @@ public class Set_Software {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(software);
+            Main.save();
             mid_list_items.remove(software);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(software);
