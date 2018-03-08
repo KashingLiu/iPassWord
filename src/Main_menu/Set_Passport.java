@@ -34,7 +34,6 @@ public class Set_Passport {
     private static Label set_Date_la = new Label("创建日期");
     private static Label set_Date_con = new Label();
 
-
     private static void pre_set_passport() {
         name_tf.setEditable(true);
         full_name_tf.setEditable(true);
@@ -310,5 +309,4 @@ public class Set_Passport {
         AnchorPane.setBottomAnchor(change,5.0);
         AnchorPane.setRightAnchor(change,100.0);
     }
-
 }

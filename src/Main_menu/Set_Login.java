@@ -221,7 +221,6 @@ public class Set_Login {
         site_tf.setText(login.getSite());
         Note_tf.setText(login.getNote());
 
-
         Button change = new Button("编辑");
         Button delete = new Button("删除");
 

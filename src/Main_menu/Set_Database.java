@@ -6,20 +6,13 @@ import Util.Password;
 import first_set.Main;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Side;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
-
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 
 public class Set_Database {
     private static TextField name_tf = new TextField();
@@ -396,6 +389,4 @@ public class Set_Database {
         AnchorPane.setBottomAnchor(change,5.0);
         AnchorPane.setRightAnchor(change,100.0);
     }
-
-
 }

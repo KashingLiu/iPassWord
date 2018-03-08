@@ -9,9 +9,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-
 public class Set_Bankaccount {
     private static TextField name_tf = new TextField();
     private static TextField account_tf = new TextField();

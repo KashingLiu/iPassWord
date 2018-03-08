@@ -19,13 +19,12 @@ public class Main extends Application {
     public static Users user = new Users();
     public static Stack<Password> back_up = new Stack<>();
     @Override
-    public void start(Stage primarystage) throws Exception{
+    public void start(Stage primarystage) {
         Parent root = new Parent() {};
         try {
             File file = new File("user.ser");
             if (!file.exists()) {
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("first_set/first_set.fxml"));
-                System.out.println(root);
             } else {
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("verify/verify.fxml"));
             }
@@ -36,9 +35,6 @@ public class Main extends Application {
         primarystage.setTitle("iPassword");
         primarystage.setScene(new Scene(root));
         primarystage.show();
-        primarystage.setOnCloseRequest((event -> {
-            System.out.println("close0");
-        }));
     }
 
     public static void main(String[] args) {

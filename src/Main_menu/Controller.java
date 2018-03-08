@@ -145,7 +145,6 @@ public class Controller {
 
         im1.setOnAction((ae)->{
             try {
-//                main_page.getChildren().clear();
                 sort_button.setText("按" + im1.getText() + "排序");
                 sort(mid_list_items, 0, mid_list_items.size() - 1, "1");
                 sort(Main.user.all_passwords, 0, Main.user.all_passwords.size() - 1, "1");
@@ -156,7 +155,6 @@ public class Controller {
         });
         im2.setOnAction((ae)->{
             try {
-//                main_page.getChildren().clear();
                 sort_button.setText("按"+im2.getText()+"排序");
                 sort(mid_list_items,0,mid_list_items.size()-1,"2");
                 sort(Main.user.all_passwords, 0, Main.user.all_passwords.size() - 1, "2");
@@ -167,7 +165,6 @@ public class Controller {
         });
         im3.setOnAction((ae)->{
             try {
-//                main_page.getChildren().clear();
                 sort_button.setText("按"+im3.getText()+"排序");
                 sort(mid_list_items,0,mid_list_items.size()-1,"3");
                 sort(Main.user.all_passwords, 0, Main.user.all_passwords.size() - 1, "3");
@@ -347,35 +344,6 @@ public class Controller {
         });
 
         //点击不同Cell时切换右侧main_page
-//        choice_list.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
-//            if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("WiFi")) {
-//                Set_WiFi.display_WiFi(choice_list,mid_list_items,add_button,main_page,bottom_page,(WirelessRouter)Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)|| Main.user.all_passwords.get(newValue.intValue()).tag.equals("main")) {
-//
-//                main_page.getChildren().clear();
-//                Set_Main.display_main(choice_list,mid_list_items,add_button,main_page,bottom_page);
-//
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Database")) {
-//                Set_Database.display_Database(choice_list,mid_list_items,add_button,main_page,bottom_page,(Database)Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("BankAccount")) {
-//                Set_Bankaccount.display_bankaccount(choice_list,mid_list_items,add_button,main_page,bottom_page,(BankAccount) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Server")) {
-//                Set_server.display_Server(choice_list,mid_list_items,add_button,main_page,bottom_page,(Server) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Software")) {
-//                Set_Software.display_software(choice_list,mid_list_items,add_button,main_page,bottom_page,(Software) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Passport")) {
-//                Set_Passport.display_passport(choice_list,mid_list_items,add_button,main_page,bottom_page,(Passport) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Membership")) {
-//                Set_Membership.display_membership(choice_list,mid_list_items,add_button,main_page,bottom_page,(Membership) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("Login")) {
-//                Set_Login.display_login(choice_list,mid_list_items,add_button,main_page,bottom_page,(Login) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)||Main.user.all_passwords.get(newValue.intValue()).tag.equals("GiftCard")) {
-//                Set_Giftcard.display_giftcard(choice_list,mid_list_items,add_button,main_page,bottom_page,(GiftCard) Main.user.all_passwords.get(newValue.intValue()));
-//            } else if (oldValue.equals(newValue)) {
-//                System.out.println("hello");
-//            }
-//        });
-
         choice_list.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             if (newValue.tag.equals("WiFi")) {
                 Set_WiFi.display_WiFi(choice_list,mid_list_items,add_button,main_page,bottom_page,(WirelessRouter)newValue);
@@ -473,8 +441,6 @@ public class Controller {
             }
         });
     }
-
-//    public void serach (K)
 }
 
 

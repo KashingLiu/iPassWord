@@ -4,7 +4,6 @@ import Util.AesCtr;
 import Util.Password;
 import Util.WirelessRouter;
 import first_set.Main;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -14,8 +13,6 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
-
-import java.util.ArrayList;
 
 public class Set_WiFi {
     private static Label WiFi_title = new Label("无线路由器");

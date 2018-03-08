@@ -33,7 +33,6 @@ public class Set_Giftcard {
     private static Label set_Date_la = new Label("创建日期");
     private static Label set_Date_con = new Label();
 
-
     private static TextArea Note_tf = new TextArea();
     private static void pre_set_giftcard() {
         name_tf.setEditable(true);

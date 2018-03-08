@@ -221,7 +221,6 @@ public class Set_Membership {
         expiryDate_tf.setText(membership.getExpiryDate());
         Note_tf.setText(membership.getNote());
 
-
         Button change = new Button("编辑");
         Button delete = new Button("删除");
 

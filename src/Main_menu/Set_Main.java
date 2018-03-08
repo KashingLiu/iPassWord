@@ -16,9 +16,6 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-
 public class Set_Main {
     private static TextField main_password_tf = new TextField();
     private static Label main_password = new Label("主密码");
