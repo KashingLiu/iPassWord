@@ -274,7 +274,7 @@ public class Set_Bankaccount {
         Note_tf.setText(bankAccount.getNote());
 
         AnchorPane.setLeftAnchor(type_tf,250.0);
-        AnchorPane.setTopAnchor(type_tf,242.0);
+        AnchorPane.setTopAnchor(type_tf,214.0);
 
         Button change = new Button("编辑");
         Button delete = new Button("删除");
@@ -286,7 +286,8 @@ public class Set_Bankaccount {
             add_button.setDisable(true);
             choice_list.setDisable(true);
             main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,account_tf,type_mb,alias_tf,account_number_tf,PIN_tf,Swift_tf,Phone_tf,address_tf,Note_tf,name,account,type,alias,account_number,PIN,Swift,Phone,address,Note,title);
-
+            AnchorPane.setLeftAnchor(type_mb,250.0);
+            AnchorPane.setTopAnchor(type_mb,214.0);
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
 

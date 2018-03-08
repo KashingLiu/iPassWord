@@ -26,7 +26,7 @@ public class Controller {
 
     /* 当密码与要求相符合，按下按钮后开锁，并跳转到新页面*/
     public void verify_press_button (ActionEvent event) {
-        Users users = null;
+        Users users;
         try
         {
             FileInputStream fileIn = new FileInputStream("user.ser");
@@ -54,15 +54,7 @@ public class Controller {
                     Scene scene = new Scene(FXMLLoader.load(getClass().getClassLoader().getResource("Main_menu/Main_menu.fxml")));
                     stage.get(0).setScene(scene);
                     stage.get(0).setOnCloseRequest((event1 -> {
-                        try {
-                            FileOutputStream fileOut = new FileOutputStream("user.ser");
-                            ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                            out.writeObject(Main.user);
-                            out.close();
-                            fileOut.close();
-                        } catch (Exception e) {
-
-                        }
+                        Main.save();
                     }));
                 } catch (IOException e1) {
                     e1.printStackTrace();

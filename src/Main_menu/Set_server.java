@@ -38,7 +38,7 @@ public class Set_server {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
-
+    private static Image out = new Image("Util/icon/safe.png");
 
     private static void pre_set_Server() {
         name_tf.setEditable(true);
@@ -135,11 +135,29 @@ public class Set_server {
     public static void set_Server(ListView<Password> choice_list, ObservableList<Password> mid_list_items, Button add_button, AnchorPane main_page, AnchorPane bottom_page) {
         GlobalMenu.ServerMenuItem.setOnAction((ActionEvent event1)->{
             main_page.getChildren().clear();
-            main_page.getChildren().removeAll(name_tf,Note_tf,name,username_tf,password_tf,IP_tf,console_username_tf,console_password_tf,username,password,IP,console_username,console_password,Note,title);
             pre_set_Server();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(name_tf,Note_tf,name,username_tf,password_tf,IP_tf,console_username_tf,console_password_tf,username,password,IP,console_username,console_password,Note,title);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,214.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+
+            ImageView safe_con = new ImageView(out);
+            safe_con.setFitWidth(23);
+            safe_con.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe_con,298.0);
+            AnchorPane.setLeftAnchor(safe_con,500.0);
+            safe_con.setOnMouseClicked((event -> {
+                console_password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,safe_con,name_tf,Note_tf,name,username_tf,password_tf,IP_tf,console_username_tf,console_password_tf,username,password,IP,console_username,console_password,Note,title);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
@@ -149,7 +167,7 @@ public class Set_server {
 
             //取消按钮
             cancel.setOnAction((ActionEvent action)->{
-                main_page.getChildren().removeAll(name_tf,Note_tf,name,username_tf,password_tf,IP_tf,console_username_tf,console_password_tf,username,password,IP,console_username,console_password,Note,title);
+                main_page.getChildren().clear();
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 bottom_page.getChildren().removeAll(cancel,ok);
@@ -178,7 +196,7 @@ public class Set_server {
                 add_list(choice_list,mid_list_items,sv);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
-                main_page.getChildren().removeAll(name_tf,Note_tf,name,username_tf,password_tf,IP_tf,console_username_tf,console_password_tf,username,password,IP,console_username,console_password,Note,title);
+                main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
             });
             bottom_page.getChildren().addAll(cancel,ok);
@@ -278,7 +296,26 @@ public class Set_server {
             pre_set_Server();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(set_Date_con,set_Date_la,name_tf,Note_tf,name,username_tf,
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,214.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+
+            ImageView safe_con = new ImageView(out);
+            safe_con.setFitWidth(23);
+            safe_con.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe_con,298.0);
+            AnchorPane.setLeftAnchor(safe_con,500.0);
+            safe_con.setOnMouseClicked((event -> {
+                console_password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,safe_con,set_Date_con,set_Date_la,name_tf,Note_tf,name,username_tf,
                     password_tf,IP_tf, console_username_tf,console_password_tf,username,password,IP,
                     console_username,console_password,Note,title);
 

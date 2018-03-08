@@ -29,7 +29,7 @@ public class Set_Main {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
-
+    private static Image out = new Image("Util/icon/safe.png");
 
     private static void pre_set_main() {
         main_password_tf.setEditable(false);
@@ -92,12 +92,10 @@ public class Set_Main {
         }));
         main_page.getChildren().addAll(imageView,clipboard,main_password_tf,main_password,set_Main_la,set_Main_con,title);
 
-
         AnchorPane.setTopAnchor(imageView,160.0);
         AnchorPane.setLeftAnchor(imageView,500.0);
         AnchorPane.setTopAnchor(clipboard,160.0);
         AnchorPane.setLeftAnchor(clipboard,520.0);
-
 
         Button change = new Button("编辑");
 
@@ -109,7 +107,17 @@ public class Set_Main {
             main_password_tf.setText(AesCtr.decrypt(Main.user.getMain_password()));
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(main_password_tf,main_password,set_Main_la,set_Main_con,title);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,160.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                main_password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,main_password_tf,main_password,set_Main_la,set_Main_con,title);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

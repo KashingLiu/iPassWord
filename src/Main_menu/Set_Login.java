@@ -33,6 +33,7 @@ public class Set_Login {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
+    private static Image out = new Image("Util/icon/safe.png");
 
     private static void pre_set_login() {
         name_tf.setEditable(true);
@@ -114,7 +115,17 @@ public class Set_Login {
             pre_set_login();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,302.0);
+            AnchorPane.setLeftAnchor(safe,520.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
@@ -220,7 +231,17 @@ public class Set_Login {
             pre_set_login();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(set_Date_con,set_Date_la,username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,302.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,set_Date_con,set_Date_la,username_tf,password_tf,site_tf,name,username,password,site,Note,title,Note_tf,name_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");

@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.util.Random;
 import java.util.Stack;
 
 public class Main extends Application {
@@ -20,12 +21,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primarystage) throws Exception{
         Parent root = new Parent() {};
-//        File file = new File("../first_set/first_set.fxml");
-//        System.out.println(file.exists());
         try {
             File file = new File("user.ser");
             if (!file.exists()) {
-//                System.out.println("no");
                 root = FXMLLoader.load(getClass().getClassLoader().getResource("first_set/first_set.fxml"));
                 System.out.println(root);
             } else {
@@ -41,8 +39,6 @@ public class Main extends Application {
         primarystage.setOnCloseRequest((event -> {
             System.out.println("close0");
         }));
-
-
     }
 
     public static void main(String[] args) {
@@ -57,8 +53,22 @@ public class Main extends Application {
             out.close();
             fileOut.close();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
+    }
+
+    public static String produce() {
+        String all_char = "a,b,c,d,e,f,g,h,i,g,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z" +
+                ",A,B,C,D,E,F,G,H,I,G,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,~,@,#,$,%,&,*,(,),."+
+                ",1,2,3,4,5,6,7,8,9,0";
+        String[] all = all_char.split(",");
+        Random random = new Random();
+        String result = "";
+        for (int i = 0; i<18; i++) {
+            int j = Math.abs(random.nextInt()%72);
+            result = result.concat(String.valueOf(all[j]));
+        }
+        return result;
     }
 }
 

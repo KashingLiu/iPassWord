@@ -45,7 +45,7 @@ public class Set_WiFi {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
-
+    private static Image out = new Image("Util/icon/safe.png");
 
     private static void pre_set_WiFi() {
 
@@ -168,7 +168,26 @@ public class Set_WiFi {
             pre_set_WiFi();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,218.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                WiFi_Password_tf.setText(Main.produce());
+            }));
+
+            ImageView safe_add = new ImageView(out);
+            safe_add.setFitWidth(23);
+            safe_add.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe_add,302.0);
+            AnchorPane.setLeftAnchor(safe_add,500.0);
+            safe_add.setOnMouseClicked((event -> {
+                WiFi_Password_add_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe_add,safe,WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
@@ -252,9 +271,9 @@ public class Set_WiFi {
             cc.putString(AesCtr.decrypt(password.getPassword()));
             clipboard2.setContent(cc);
         }));
-        AnchorPane.setTopAnchor(imageView1,302.0);
+        AnchorPane.setTopAnchor(imageView1,218.0);
         AnchorPane.setLeftAnchor(imageView1,500.0);
-        AnchorPane.setTopAnchor(clipboard1,302.0);
+        AnchorPane.setTopAnchor(clipboard1,218.0);
         AnchorPane.setLeftAnchor(clipboard1,520.0);
 
         ImageView imageView = new ImageView();
@@ -285,9 +304,27 @@ public class Set_WiFi {
         AnchorPane.setTopAnchor(clipboard,302.0);
         AnchorPane.setLeftAnchor(clipboard,520.0);
 
+        ImageView safe = new ImageView(out);
+        safe.setFitWidth(23);
+        safe.setFitHeight(23);
+        AnchorPane.setTopAnchor(safe,218.0);
+        AnchorPane.setLeftAnchor(safe,500.0);
+        safe.setOnMouseClicked((event -> {
+            WiFi_Password_tf.setText(Main.produce());
+        }));
+
+        ImageView safe_add = new ImageView(out);
+        safe_add.setFitWidth(23);
+        safe_add.setFitHeight(23);
+        AnchorPane.setTopAnchor(safe_add,302.0);
+        AnchorPane.setLeftAnchor(safe_add,500.0);
+        safe_add.setOnMouseClicked((event -> {
+            WiFi_Password_add_tf.setText(Main.produce());
+        }));
+
 
         set_Date_con.setText(password.getSetUpDate());
-        main_page.getChildren().addAll(imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+        main_page.getChildren().addAll(safe,safe_add,imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
                 WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
                 WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,
                 WiFi_Password_add_tf,WiFi_Note_tf);

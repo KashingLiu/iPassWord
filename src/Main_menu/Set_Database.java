@@ -7,6 +7,7 @@ import first_set.Main;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Side;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -28,7 +29,6 @@ public class Set_Database {
     private static TextField password_tf = new TextField();
     private static TextField connection_options_tf = new TextField();
     private static TextField type_tf = new TextField();
-
     private static Label name = new Label("全名");
     private static Label type = new Label("数据库类型");
     private static Label server = new Label("服务器");
@@ -55,6 +55,8 @@ public class Set_Database {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
+
+    private static Image out = new Image("Util/icon/safe.png");
 
     private static void pre_set_Database() {
         mi1.setOnAction((ActionEvent ae1)->{
@@ -187,7 +189,15 @@ public class Set_Database {
             pre_set_Database();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(type_mb,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,302.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+            main_page.getChildren().addAll(safe,type_mb,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
@@ -290,9 +300,10 @@ public class Set_Database {
         connection_options_tf.setText(database.getConnection_options());
         Note_tf.setText(database.getNote());
         type_tf.setText(database.getType());
+        type_tf.setStyle("-fx-background-color: white");
 
         AnchorPane.setLeftAnchor(type_tf,250.0);
-        AnchorPane.setTopAnchor(type_tf,242.0);
+        AnchorPane.setTopAnchor(type_tf,186.0);
 
 
         Button change = new Button("编辑");
@@ -304,7 +315,17 @@ public class Set_Database {
             pre_set_Database();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(set_Date_con,set_Date_la,type_tf,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
+
+            ImageView safe = new ImageView(out);
+            safe.setFitWidth(23);
+            safe.setFitHeight(23);
+            AnchorPane.setTopAnchor(safe,302.0);
+            AnchorPane.setLeftAnchor(safe,500.0);
+            safe.setOnMouseClicked((event -> {
+                password_tf.setText(Main.produce());
+            }));
+
+            main_page.getChildren().addAll(safe,set_Date_con,set_Date_la,type_mb,name_tf,server_tf,port_tf,username_tf,password_tf,connection_options_tf,name,type,server,port,username,password,connection_options,Note,title,Note_tf);
 
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
@@ -354,8 +375,8 @@ public class Set_Database {
             Note_tf.setText(database.getNote());
             type_tf.setText(database.getType());
 
-            AnchorPane.setLeftAnchor(type_tf,250.0);
-            AnchorPane.setTopAnchor(type_tf,242.0);
+            AnchorPane.setLeftAnchor(type_mb,250.0);
+            AnchorPane.setTopAnchor(type_mb,186.0);
 
             choice_list.setItems(mid_list_items);
         });
