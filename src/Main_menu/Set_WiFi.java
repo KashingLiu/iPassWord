@@ -222,19 +222,21 @@ public class Set_WiFi {
                 if (WiFi_security.equals("加密方式")) {
                     WiFi_security = "无";
                 }
-                //新建一个对象来储存
+                //新建一个对象来储存已经输入的密码
                 Util.WirelessRouter wr = new Util.WirelessRouter(name_input, Note_input);
                 wr.setPassword(AesCtr.encrypt(WiFi_Password_tf.getText()));
                 wr.setPassword_add(AesCtr.encrypt(WiFi_Password_add_tf.getText()));
                 wr.setSecurity(WiFi_security);
                 wr.setSSID(WiFi_SSID_tf.getText());
                 wr.setServerIP(WiFi_ServerIP_tf.getText());
-                set_Date_con.setText(wr.getSetUpDate());
-                Main.user.add_password(wr);
-                Main.save();
-                add_list(choice_list,mid_list_items,wr);
+                set_Date_con.setText(wr.getSetUpDate());    //设置创建日期
+                Main.user.add_password(wr);                 //增加到用户全部密码
+                Main.save();                                //储存，写入到文件
+                add_list(choice_list,mid_list_items,wr);    //添加到中间那个列表
+                //更改按钮和列表状态，设置为可查看
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
+                //清空所有项目
                 main_page.getChildren().clear();
                 bottom_page.getChildren().removeAll(ok,cancel);
             });
@@ -249,7 +251,10 @@ public class Set_WiFi {
         choice_list.setItems(mid_list_items);
     }
 
+
+    //在列表中点某一个wifi选项，进入查看页面
     public static void display_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page, WirelessRouter password) {
+        //清除掉之前页面的内容
         main_page.getChildren().clear();
         pre_set_WiFi();
 
@@ -329,7 +334,7 @@ public class Set_WiFi {
 
 
         set_Date_con.setText(password.getSetUpDate());
-        main_page.getChildren().addAll(safe,safe_add,imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+        main_page.getChildren().addAll(imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
                 WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
                 WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,
                 WiFi_Password_add_tf,WiFi_Note_tf);
@@ -362,7 +367,7 @@ public class Set_WiFi {
             pre_set_WiFi();
             add_button.setDisable(true);
             choice_list.setDisable(true);
-            main_page.getChildren().addAll(set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+            main_page.getChildren().addAll(safe,safe_add,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
                     WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
                     WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,
                     WiFi_Password_add_tf,WiFi_Note_tf);

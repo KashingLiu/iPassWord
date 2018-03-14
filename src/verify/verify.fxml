@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="verify.Controller">
    <children>
        <SVGPath content="M116.587 440.171h564.044c29.993 0 54 24.755 54 55.687v408.335c0 30.931-24.007 55.687-54 55.687h-564.044c-30.003 0-54-24.755-54-55.687v-408.335c0-30.931 23.997-55.687 54-55.687zM368.607 712.397v86.618c0 6.187 5.997 6.187 5.997 6.187h48.003c6.007 0 6.007-6.187 6.007-6.187v-86.618c23.997-12.372 36-37.118 36-61.864 0-37.128-30.003-68.059-66.003-68.059s-66.013 30.931-66.013 68.049c0 30.941 12.003 49.5 36 61.872z" fill="#707070" layoutX="-271.0" layoutY="-493.0" style="-fx-scale-y: 0.06; -fx-scale-x: 0.06;" />
-      <Button fx:id="mybutton" layoutX="458.0" layoutY="184.0" mnemonicParsing="false" onAction="#verify_press_button" text="确认" />
+      <Button fx:id="mybutton" defaultButton="true" layoutX="458.0" layoutY="184.0" mnemonicParsing="false" onAction="#verify_press_button" text="确认" />
       <PasswordField fx:id="password" layoutX="185.0" layoutY="178.0" promptText="输入您的主密码">
          <font>
             <Font size="20.0" />

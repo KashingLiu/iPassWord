@@ -61,6 +61,8 @@ public class Set_Main {
     }
 
     public static void display_main(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page) {
+        bottom_page.getChildren().clear();
+
         main_page.getChildren().clear();
         pre_set_main();
         set_Main_con.setText(Main.user.main.getSetUpDate());
@@ -148,5 +150,6 @@ public class Set_Main {
         bottom_page.getChildren().addAll(change);
         AnchorPane.setBottomAnchor(change,5.0);
         AnchorPane.setRightAnchor(change,100.0);
+//        bottom_page.getChildren().addAll(add_button, change);
     }
 }

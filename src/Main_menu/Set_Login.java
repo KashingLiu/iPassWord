@@ -119,8 +119,8 @@ public class Set_Login {
             ImageView safe = new ImageView(out);
             safe.setFitWidth(23);
             safe.setFitHeight(23);
-            AnchorPane.setTopAnchor(safe,302.0);
-            AnchorPane.setLeftAnchor(safe,520.0);
+            AnchorPane.setTopAnchor(safe,214.0);
+            AnchorPane.setLeftAnchor(safe,510.0);
             safe.setOnMouseClicked((event -> {
                 password_tf.setText(Main.produce());
             }));
@@ -234,7 +234,7 @@ public class Set_Login {
             ImageView safe = new ImageView(out);
             safe.setFitWidth(23);
             safe.setFitHeight(23);
-            AnchorPane.setTopAnchor(safe,302.0);
+            AnchorPane.setTopAnchor(safe,214.0);
             AnchorPane.setLeftAnchor(safe,500.0);
             safe.setOnMouseClicked((event -> {
                 password_tf.setText(Main.produce());
