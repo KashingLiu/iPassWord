@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ipas">
+    <output-path>$PROJECT_DIR$/out/artifacts/ipas</output-path>
+    <root id="archive" name="ipas.jar">
+      <element id="module-output" name="JavaFxApplication" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+      <element id="library" level="project" name="zxcvbn-1.2.4-javadoc" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/Util/zxcvbn-1.2.4.jar" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

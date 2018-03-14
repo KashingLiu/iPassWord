@@ -7,17 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/append/main_page.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/append/verify.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/Main_menu/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Util/AesEncodeUtil.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/Util/verify_password.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/first_set/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/verify/Controller.class" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/verify/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/src/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
-      <change beforePath="$PROJECT_DIR$/src/verify/Controller.java" afterPath="$PROJECT_DIR$/src/verify/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" afterPath="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
+      <change beforePath="$PROJECT_DIR$/src/first_set/Controller.java" afterPath="$PROJECT_DIR$/src/first_set/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,13 +67,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Set_WiFi.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Set_WiFi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="242">
+              <caret line="316" column="41" lean-forward="false" selection-start-line="316" selection-start-column="41" selection-end-line="316" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#pre_set_WiFi#0;class#Set_WiFi#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -100,7 +93,7 @@
       <file leaf-file-name="BankAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-29">
               <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding />
             </state>
@@ -110,8 +103,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="76" column="65" lean-forward="true" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+            <state relative-caret-position="549">
+              <caret line="87" column="45" lean-forward="false" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,19 +115,19 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="-122">
               <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -286,12 +279,12 @@
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Main.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Membership.java" />
         <option value="$PROJECT_DIR$/src/Main_menu/Set_Passport.java" />
-        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
         <option value="$PROJECT_DIR$/src/Util/BankAccount.java" />
-        <option value="$PROJECT_DIR$/src/first_set/Controller.java" />
         <option value="$PROJECT_DIR$/src/verify/Controller.java" />
         <option value="$PROJECT_DIR$/src/Readme.md" />
         <option value="$PROJECT_DIR$/Readme.md" />
+        <option value="$PROJECT_DIR$/src/first_set/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main_menu/Set_WiFi.java" />
       </list>
     </option>
   </component>
@@ -342,6 +335,23 @@
               <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
               <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
               <item name="append" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main_menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iPassWord" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iPassWord" type="b2602c69:ProjectViewProjectNode" />
@@ -650,7 +660,7 @@
       <workItem from="1520334103799" duration="17859000" />
       <workItem from="1520415308679" duration="9932000" />
       <workItem from="1520520368204" duration="7000" />
-      <workItem from="1521014557138" duration="1503000" />
+      <workItem from="1521014557138" duration="1961000" />
     </task>
     <task id="LOCAL-00001" summary="增加了contextmenu里面的wifi选项，并能在右侧编辑内容，在中间添加到列表&#10;下一步是显示出来">
       <created>1519869271520</created>
@@ -736,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520491653218</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="~">
+      <created>1521016331423</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1521016331424</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229510000" />
+    <option name="totallyTimeSpent" value="229968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1190" height="1057" extended-state="0" />
@@ -919,6 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,16 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/AesCtr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1137,40 +1145,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/BankAccount.java">
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        <state relative-caret-position="-122">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/first_set/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="76" column="65" lean-forward="true" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+        <state relative-caret-position="549">
+          <caret line="87" column="45" lean-forward="false" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/verify/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Util/BankAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="-29">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/Main_menu/Set_WiFi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="316" column="41" lean-forward="false" selection-start-line="316" selection-start-column="41" selection-end-line="316" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#pre_set_WiFi#0;class#Set_WiFi#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

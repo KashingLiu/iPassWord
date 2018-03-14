@@ -4,6 +4,7 @@ import Util.AesCtr;
 import Util.Password;
 import Util.WirelessRouter;
 import first_set.Main;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -13,6 +14,8 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
+
+import java.util.ArrayList;
 
 public class Set_WiFi {
     private static Label WiFi_title = new Label("无线路由器");
@@ -42,7 +45,7 @@ public class Set_WiFi {
     private static Image see_1 = new Image("Util/icon/see_before.png");
     private static Image see_2 = new Image("Util/icon/see_after.png");
     private static Image clip = new Image("Util/icon/clip.png");
-    private static Image out = new Image("Util/icon/safe.png");
+
 
     private static void pre_set_WiFi() {
 
@@ -160,39 +163,13 @@ public class Set_WiFi {
 
     //点击WiFi那个menu之后进入的设置页面
     public static void set_WiFi(ListView<Password> choice_list, ObservableList<Password> mid_list_items,Button add_button,AnchorPane main_page,AnchorPane bottom_page) {
-        //给menu添加响应事件
         GlobalMenu.WiFiMenuItem.setOnAction((ActionEvent event1)->{
-            //首先要清空原来的内容
             main_page.getChildren().clear();
-            //设置格式
             pre_set_WiFi();
-            //添加的时候加号按钮不能使用，列表也设置为不可用
             add_button.setDisable(true);
             choice_list.setDisable(true);
+            main_page.getChildren().addAll(WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
 
-            //两个随机生成密码的按钮
-            ImageView safe = new ImageView(out);
-            safe.setFitWidth(23);
-            safe.setFitHeight(23);
-            AnchorPane.setTopAnchor(safe,218.0);
-            AnchorPane.setLeftAnchor(safe,500.0);
-            safe.setOnMouseClicked((event -> {
-                WiFi_Password_tf.setText(Main.produce());
-            }));
-
-            ImageView safe_add = new ImageView(out);
-            safe_add.setFitWidth(23);
-            safe_add.setFitHeight(23);
-            AnchorPane.setTopAnchor(safe_add,302.0);
-            AnchorPane.setLeftAnchor(safe_add,500.0);
-            safe_add.setOnMouseClicked((event -> {
-                WiFi_Password_add_tf.setText(Main.produce());
-            }));
-
-            //添加所有项目
-            main_page.getChildren().addAll(safe_add,safe,WiFi_title,WiFi_name,WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_mb,WiFi_ServerIP_tf,WiFi_Password_add_tf,WiFi_Note_tf);
-
-            //设置保存取消按钮
             Button ok = new Button("保存");
             Button cancel = new Button("取消");
 
@@ -222,7 +199,6 @@ public class Set_WiFi {
                 if (WiFi_security.equals("加密方式")) {
                     WiFi_security = "无";
                 }
-                //新建一个对象来储存
                 Util.WirelessRouter wr = new Util.WirelessRouter(name_input, Note_input);
                 wr.setPassword(AesCtr.encrypt(WiFi_Password_tf.getText()));
                 wr.setPassword_add(AesCtr.encrypt(WiFi_Password_add_tf.getText()));
@@ -231,7 +207,6 @@ public class Set_WiFi {
                 wr.setServerIP(WiFi_ServerIP_tf.getText());
                 set_Date_con.setText(wr.getSetUpDate());
                 Main.user.add_password(wr);
-                Main.save();
                 add_list(choice_list,mid_list_items,wr);
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
@@ -276,9 +251,9 @@ public class Set_WiFi {
             cc.putString(AesCtr.decrypt(password.getPassword()));
             clipboard2.setContent(cc);
         }));
-        AnchorPane.setTopAnchor(imageView1,218.0);
+        AnchorPane.setTopAnchor(imageView1,302.0);
         AnchorPane.setLeftAnchor(imageView1,500.0);
-        AnchorPane.setTopAnchor(clipboard1,218.0);
+        AnchorPane.setTopAnchor(clipboard1,302.0);
         AnchorPane.setLeftAnchor(clipboard1,520.0);
 
         ImageView imageView = new ImageView();
@@ -309,27 +284,9 @@ public class Set_WiFi {
         AnchorPane.setTopAnchor(clipboard,302.0);
         AnchorPane.setLeftAnchor(clipboard,520.0);
 
-        ImageView safe = new ImageView(out);
-        safe.setFitWidth(23);
-        safe.setFitHeight(23);
-        AnchorPane.setTopAnchor(safe,218.0);
-        AnchorPane.setLeftAnchor(safe,500.0);
-        safe.setOnMouseClicked((event -> {
-            WiFi_Password_tf.setText(Main.produce());
-        }));
-
-        ImageView safe_add = new ImageView(out);
-        safe_add.setFitWidth(23);
-        safe_add.setFitHeight(23);
-        AnchorPane.setTopAnchor(safe_add,302.0);
-        AnchorPane.setLeftAnchor(safe_add,500.0);
-        safe_add.setOnMouseClicked((event -> {
-            WiFi_Password_add_tf.setText(Main.produce());
-        }));
-
 
         set_Date_con.setText(password.getSetUpDate());
-        main_page.getChildren().addAll(safe,safe_add,imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
+        main_page.getChildren().addAll(imageView,clipboard,imageView1,clipboard1,set_Date_con,set_Date_la,WiFi_title,WiFi_name,
                 WiFi_Password,WiFi_ServerIP,WiFi_SSID,WiFi_security,WiFi_Note,WiFi_Password_add,
                 WiFi_name_tf,WiFi_SSID_tf,WiFi_Password_tf,WiFi_security_tf,WiFi_ServerIP_tf,
                 WiFi_Password_add_tf,WiFi_Note_tf);
@@ -394,9 +351,7 @@ public class Set_WiFi {
                 password.setServerIP(WiFi_ServerIP_tf.getText());
                 password.setPassword_add(AesCtr.encrypt(WiFi_Password_add_tf.getText()));
                 password.setNote(WiFi_Note_tf.getText());
-                Main.user.all_passwords.remove(password);
-                Main.user.all_passwords.add(password);
-                Main.save();
+
                 add_button.setDisable(false);
                 choice_list.setDisable(false);
                 main_page.getChildren().clear();
@@ -422,7 +377,6 @@ public class Set_WiFi {
         delete.setOnAction((ActionEvent ae1)->{
             bottom_page.getChildren().removeAll(change, delete);
             Main.user.all_passwords.remove(password);
-            Main.save();
             mid_list_items.remove(password);
             choice_list.setItems(mid_list_items);
             Main.back_up.push(password);

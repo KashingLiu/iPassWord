@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="first_set.Controller">
+   <children>
+      <PasswordField fx:id="main_password" layoutX="217.0" layoutY="187.0" promptText="请输入您的主密码" />
+      <Separator layoutX="157.0" layoutY="15.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="15.0" />
+      <SVGPath fillRule="EVEN_ODD" layoutX="-120.0" layoutY="-142.0" />
+      <Label layoutX="20.0" layoutY="198.0" text="iPassword">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="82.0" fitWidth="88.0" layoutX="45.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Util/icon/lock_login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="185.0" layoutY="47.0" text="设置您的主密码">
+         <font>
+            <Font name="Helvetica Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="113.0" text="您的主密码十分重要,通过它可以查看您设置的所有密码,请妥善保管." />
+      <Label layoutX="188.0" layoutY="363.0" text="Copyright © 2018 Kashing Liu. All Rights Reserved." />
+      <Button fx:id="first_set_btn" contentDisplay="CENTER" layoutX="437.0" layoutY="187.0" mnemonicParsing="false" onAction="#ButtonPressed" text="确认">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <ProgressBar fx:id="pb" layoutX="282.0" layoutY="231.0" prefHeight="1.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: white;" />
+      <Label layoutX="217.0" layoutY="233.0" text="密码强度" AnchorPane.leftAnchor="217.0" />
+      <Text fx:id="tt1" layoutX="217.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.21875" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tt2" layoutX="217.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.21875" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tt5" layoutX="217.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.21875" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tt4" layoutX="217.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.21875" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tt3" layoutX="217.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.21875" AnchorPane.leftAnchor="217.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

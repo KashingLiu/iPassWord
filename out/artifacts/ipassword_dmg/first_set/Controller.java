@@ -86,6 +86,9 @@ public class Controller {
                 ObservableList<Stage> stage = FXRobotHelper.getStages();
                 Scene scene = new Scene(FXMLLoader.load(getClass().getClassLoader().getResource("Main_menu/Main_menu.fxml")));
                 stage.get(0).setScene(scene);
+                stage.get(0).setOnCloseRequest((event -> {
+                    System.out.println("close");
+                }));
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
